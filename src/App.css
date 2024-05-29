@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #111111;
+  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
+  radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center-container{
+  width: 50vw;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 45%;
+  position: fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.principle-container {
   display: flex;
+  padding: 20px;
   flex-direction: column;
+  align-content: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: nowrap;
+}
+
+.button-container {
+  /*sorting*/
+  display: flex;
+  flex-direction: column;
+
+  /*positions*/
+  z-index: 10;
+  position: fixed;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button{
+  /*shape*/
+  margin: 5px;
+  width: 15vw;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.action {
+  /*colours*/
+  background-color: #077777;
+  color: aliceblue;
+
+}
+
+.action:hover {
+  background-color: #088888;
+}
+
+h1{
+  font-family: "Ubuntu", sans-serif;
+  color: aliceblue;
+  margin: 10px 0;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.description{
+  font-family: "Rubik", sans-serif;
+  color: aliceblue;
+  font-size: x-large;
+}
+
+.source{
+  font-family: "Rubik", sans-serif;
+  color: aliceblue;
+  font-size: large;
+}
+
+.copy-message {
+  background-color: #099966;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
