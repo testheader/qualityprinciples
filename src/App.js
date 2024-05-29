@@ -26,7 +26,7 @@ function App() {
     };
 
     const copyToClipboard = () => {
-        const CURRENT_URL = "localhost:3000"
+        const CURRENT_URL = "https://qualityprinciples.netlify.app"
         navigator.clipboard.writeText(CURRENT_URL+"?id=" + index)
             .then(() => {
             setShowCopyMessage(true);
