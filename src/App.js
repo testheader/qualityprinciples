@@ -1,7 +1,6 @@
-import {generateBackground} from "./components/generateBackground";
 // src/App.js
 import './App.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import principles from './resources/principles.json';
 
 function App() {
@@ -34,18 +33,21 @@ function App() {
         });
     }
 
-    useEffect(() => {
-        generateBackground();
-    }, []);
+    const renderPrinciples= () => {
+        return principles.principles[index].source.map(principle => (
+            <p className="source">{principle}</p>
+        ))
+    }
 
     return (
         <div>
-            <canvas style={{zIndex: '0'}}></canvas>
+
+
             <div className="center-container">
                 <div className="principle-container">
                     <h1>{principles.principles[index].title}</h1>
                     <p className="description">{principles.principles[index].description}</p>
-                    <p className="source">{principles.principles[index].source}</p>
+                    {renderPrinciples()}
                 </div>
             </div>
             <div className="button-container">

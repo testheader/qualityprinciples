@@ -1,89 +1,89 @@
 {
   "principles": [
     {
-      "title": "Stop starting start stopping",
+      "title": "Stop starting, start finishing",
       "description": "The best way to make progress is to make sure we finish the task we started. We do this by finishing tasks before we start a new one. Tasks in review have a higher priority than tasks in progress. And tasks in progress have to be finished before we start a new task.",
-      "source": ""
+      "source": ["Agile principle"]
     },
     {
       "title": "Genchi genbutsu",
-      "description": "One of the Toyota principles that translates to “Real place, real thing” and means “Go and see”. By this we mean that when we encounter issues, everybody tries to help and solve them. Even when you don’t know how or what, you do your best to help out in any way you can.",
-      "source": ""
+      "description": "Principles that translates to “Real place, real thing” and means “Go and see”. By this we mean that when we encounter issues, everybody tries to help and solve them. Even when you don’t know how or what, you do your best to help out in any way you can.",
+      "source": ["The Toyota Way", "https://en.wikipedia.org/wiki/Genchi_Genbutsu"]
     },
     {
-      "title": "Bike-shedding",
+      "title": "No bike-shedding",
       "description": "This principle comes from the design sphere. When designing an office everybody has an opinion on the color of the bike shed. It’s so very unimportant and is dictated by taste alone. We must be aware that we don’t lose time on matters that don’t help us.",
-      "source": ""
+      "source": ["design principle"]
     },
     {
       "title": "The size of the cans isn’t decided by the aluminium manufacturer.",
       "description": "We don’t let our suppliers decide how we do things. Cola doesn’t sell 1 meter tall cans just because the supplier gives them 1 meter tall rolls of aluminum. We know our architecture and how we handle data better. We know the best way to retrieve and provide data. We don’t let our clients or suppliers decide.",
-      "source": ""
+      "source": ["J. Vandepitte"]
     },
     {
       "title": "If you want to go fast go alone, if you want to go far go together",
-      "description": "This is an African proverb from Burkina Faso. It’s also told as ‘Alone a youth runs fast, with an elder slow, but together they go far’. Sometimes we want things to go fast and dedicate one person's time. But at some point we’ll want to solidify their efforts and spread the knowledge so everyone can help out later. It’s not bad to focus on one part as long as it’s followed by knowledge spreading.",
-      "source": ""
+      "description": "Sometimes we want things to go fast and dedicate one person's time. But at some point we’ll want to solidify their efforts and spread the knowledge so everyone can help out later. It’s not bad to focus on one part as long as it’s followed by knowledge spreading.",
+      "source": ["African proverb from Burkina Faso"]
     },
     {
       "title": "Things are the way they are because they go that way",
-      "description": "A quote by Gerald Weinberg. We build processes over time. And processes form us. We must look at them critically but also accept good reasons for doing them that way. But we must also change processes when we are just doing it because “that’s how we’ve always done it”.",
-      "source": ""
+      "description": "We build processes over time. And processes form us. We must look at them critically but also accept good reasons for doing them that way. But we must also change processes when we are just doing it because “that’s how we’ve always done it”.",
+      "source": ["Gerald Weinberg in the secrets of consulting", "https://en.wikipedia.org/wiki/Gerald_Weinberg"]
     },
     {
-      "title": "12 angry men",
+      "title": "12 angry men principle",
       "description": "A great movie about the jury in a trial. One of the 12 jurors challenged the 11 others that were convinced the perpetrator was guilty. He found that we should at least look at other options and go against our biases. During any point in a discussion it’s useful for one person to take an opposite point and challenge our way of thinking. Not out of spite, but to make sure we’re not making any rash decisions.",
-      "source": ""
+      "source": ["Movie by Sidney Lumet from a play by Reginald Rose", "https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)"]
     },
     {
-      "title": "Orchestration VS Choreography",
+      "title": "Orchestration vs. Choreography",
       "description": "These two design principles help us understand how components interact. Choreography is where each component interacts with other components through an exchange of messages. Orchestration is where a central controller manages a series of complex tasks or workflows. In my experience, it’s better for each service to have its own dedicated task and do that task excellently. When we rely on a central controller things get more complex and entangled.",
-      "source": ""
+      "source": ["Design principles"]
     },
     {
       "title": "What’s good for the hive is good for the bee",
       "description": "When working small tasks we sometimes lose track of why we’re doing what we do. We try to keep everyone up to date on why we’re doing things and what our collective goal is. This helps us understand why we do what we do. And allows us to propose improvements that suit our collective goal better.",
-      "source": ""
+      "source": ["Marcus Aurelius - Roman emperor"]
     },
     {
       "title": "Cargo cult",
       "description": "In Melanesia there was an indigenous tribe living on islands. These islands were used by the military for a while. And after the war was over, they left everything as is. The tribes started building fake planes, wooden rifles and holding parades, just like the military did. Even if they don’t have any use for it. We must be aware of our process and rituals. We don’t become a (cargo) cult mimicking other companies and doing things ‘because we have to do it’.",
-      "source": ""
+      "source": ["A ritualistic belief system", "https://en.wikipedia.org/wiki/Cargo_cult"]
     },
     {
       "title": "Test early, Test often",
       "description": "The sooner we get feedback the sooner we can improve our features. The higher the frequency of our testing, the more times we can improve our features. This principle focuses on creating a small feedback loop that occurs as frequently as possible.",
-      "source": ""
+      "source": ["Design principle"]
     },
     {
       "title": "The Boy scout rule",
-      "description": "A quote by scouts founder R. Baden-Powell is: 'Try and leave this world a little better than you found it.'. We try and do the same thing on a code level. We improve our codebase every time we use it. We clean up around us and try to make it better in any way we can. When making a change you’ll leave it in cleaner/better/faster/stronger place than you found it.",
-      "source": ""
+      "description": "Try and leave this world a little better than you found it. We try and do the same thing on a code level. We improve our codebase every time we use it. We clean up around us and try to make it better in any way we can. When making a change you’ll leave it in cleaner/better/faster/stronger place than you found it.",
+      "source": ["A quote by scouts founder R. Baden-Powell"]
     },
     {
       "title": "What hinders your task becomes our task",
-      "description": "This was brought to us by Sanford Meisner. Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill it, it just means you now have a task. Once all obstructions are cleared we finish our original task.",
-      "source": ""
+      "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill it, it just means you now have a task. Once all obstructions are cleared we finish our original task.",
+      "source": ["Sanford Meisner"]
     },
     {
-      "title": "SOLID code.",
-      "description": "",
-      "source": ""
+      "title": "Write SOLID code.",
+      "description": "A collection of 5 principles: Single-responsibility, Open-Closed, Liskov substitution, Interface segregation, Dependency inversion",
+      "source": ["Acronym by Michael Feathers based on Robert C. Martins paper", "https://en.wikipedia.org/wiki/SOLID"]
     },
     {
-      "title": "Graceful exit",
+      "title": "Graceful exit and fault tolerance",
       "description": "In cases where we’re not able to return the desired result we answer with a graceful backup. We try not to return errors.",
-      "source": ""
+      "source": ["https://en.wikipedia.org/wiki/Fault_tolerance","https://en.wikipedia.org/wiki/Graceful_exit"]
     },
     {
       "title": "Sync conversations - Async conclusions",
       "description": "When looking into issues and finding solutions we should try to work synchronously. This allows us to come to conclusions faster. Once these conclusions are reached we document them. This allows us to refer back to them and share them asynchronously.",
-      "source": ""
+      "source": [""]
     },
     {
       "title": "Slow is smooth and smooth is fast",
       "description": "",
-      "source": ""
+      "source": ["Professional kitchen mantra"]
     }
   ]
 }

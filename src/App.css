@@ -14,6 +14,10 @@ canvas {
   z-index: 1;
 }
 
+.canvas{
+  background-color: #111111FF;
+}
+
 .center-container{
   width: 50vw;
   transform: translate(-50%, -50%);
@@ -40,7 +44,7 @@ canvas {
   /*positions*/
   z-index: 10;
   position: fixed;
-  top: 66%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -89,6 +93,8 @@ h1{
   font-family: "Rubik", sans-serif;
   color: aliceblue;
   font-size: large;
+  font-style: italic;
+  margin: 5px;
 }
 
 .copy-message {
