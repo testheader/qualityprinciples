@@ -4,6 +4,12 @@ import { useState } from "react";
 import principles from './resources/principles.json';
 
 function App() {
+    const CURRENT_URL = "https://qualityprinciples.netlify.app"
+
+    const getUrlWithIndex = () => {
+        return CURRENT_URL+"?id=" + index
+    }
+
     const getInitialIndexFromUrl = () => {
         const params = new URLSearchParams(window.location.search);
         let id = parseInt(params.get('id'), 10);
@@ -25,8 +31,7 @@ function App() {
     };
 
     const copyToClipboard = () => {
-        const CURRENT_URL = "https://qualityprinciples.netlify.app"
-        navigator.clipboard.writeText(CURRENT_URL+"?id=" + index)
+        navigator.clipboard.writeText(getUrlWithIndex())
             .then(() => {
             setShowCopyMessage(true);
             setTimeout(() => setShowCopyMessage(false), 2000);
@@ -39,10 +44,32 @@ function App() {
         ))
     }
 
+    const buildTweet = () => {
+        let result = new URL("/intent/tweet", "https://x.com")
+        result.searchParams.append("text", principles.principles[index].title + "\n")
+        result.searchParams.append("url", getUrlWithIndex())
+        result.searchParams.append("via", "vdlgeert")
+        result.searchParams.append("hashtags", "qualityPrinciples")
+
+        return result.toString()
+    };
+
+    const buildLinkedIn = () => {
+        let result = new URL("share", "https://linkedin.com")
+        let text =
+            "Found this at " + getUrlWithIndex() + "\n" +
+            principles.principles[index].title + "\n\n" +
+            principles.principles[index].description + "\n\n" +
+            "sources:" + principles.principles[index].source.map(a => " " + a) + "\n"
+
+        result.searchParams.append("text", text)
+        result.searchParams.append("url", getUrlWithIndex())
+
+        return result.toString()
+    }
+
     return (
         <div>
-
-
             <div className="center-container">
                 <div className="principle-container">
                     <h1>{principles.principles[index].title}</h1>
@@ -54,11 +81,16 @@ function App() {
                 <div className="action button" onClick={handleNextPrinciple}>
                     Next Principle
                 </div>
+                <div className="spacer">Share this principle make the world a better place:</div>
                 {!showCopyMessage &&
-                <div className="action button" onClick={copyToClipboard}>
-                    Share
-                </div>}
+                    <div className="action button" onClick={copyToClipboard}>
+                        Copy URL
+                    </div>}
                 {showCopyMessage && <div className="copy-message button">Link copied to clipboard!</div>}
+                <div className="share-container">
+                    <a className="action button share" href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
+                    <a className="action button share" href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
             </div>
         </div>
     );
