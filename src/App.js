@@ -70,10 +70,10 @@ function App() {
     }
 
     return (
-        <div className={isMobile?console.log("mobile"):console.log("desktop")}>
+        <div>
             <div className={isMobile?"":"center-container"}>
                 <div className={isMobile?"":"principle-container"}>
-                    <h1>{principles.principles[index].title}</h1>
+                    <h1>{isMobile?"MOBILE":principles.principles[index].title}</h1>
                     <p className={isMobile?"":"description"}>{principles.principles[index].description}</p>
                     {renderPrinciples()}
                 </div>
