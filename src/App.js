@@ -2,6 +2,7 @@
 import './App.css';
 import { useState } from "react";
 import principles from './resources/principles.json';
+import {isMobile} from 'react-device-detect';
 
 function App() {
     const CURRENT_URL = "https://qualityprinciples.netlify.app"
@@ -40,7 +41,7 @@ function App() {
 
     const renderPrinciples= () => {
         return principles.principles[index].source.map(principle => (
-            <p className="source">{principle}</p>
+            <p className={isMobile?"":"source"}>{principle}</p>
         ))
     }
 
@@ -69,27 +70,27 @@ function App() {
     }
 
     return (
-        <div>
-            <div className="center-container">
-                <div className="principle-container">
+        <div className={isMobile?console.log("mobile"):console.log("desktop")}>
+            <div className={isMobile?"":"center-container"}>
+                <div className={isMobile?"":"principle-container"}>
                     <h1>{principles.principles[index].title}</h1>
-                    <p className="description">{principles.principles[index].description}</p>
+                    <p className={isMobile?"":"description"}>{principles.principles[index].description}</p>
                     {renderPrinciples()}
                 </div>
             </div>
-            <div className="button-container">
-                <div className="action button" onClick={handleNextPrinciple}>
+            <div className={isMobile?"":"button-container"}>
+                <div className={isMobile?"":"button action"} onClick={handleNextPrinciple}>
                     Next Principle
                 </div>
-                <div className="spacer">Share this principle make the world a better place:</div>
+                <div className={isMobile?"":"spacer"}>Share this principle make the world a better place:</div>
                 {!showCopyMessage &&
-                    <div className="action button" onClick={copyToClipboard}>
+                    <div className={isMobile?"":"button action"} onClick={copyToClipboard}>
                         Copy URL
                     </div>}
-                {showCopyMessage && <div className="copy-message button">Link copied to clipboard!</div>}
-                <div className="share-container">
-                    <a className="action button share" href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
-                    <a className="action button share" href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
+                {showCopyMessage && <div className={isMobile?"":"copy-message button"}>Link copied to clipboard!</div>}
+                <div className={isMobile?"":"share-container"}>
+                    <a className={isMobile?"":"button social"} href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
+                    <a className={isMobile?"":"button social"} href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
             </div>
         </div>

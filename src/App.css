@@ -48,12 +48,16 @@ canvas {
   /*positions*/
   z-index: 10;
   position: fixed;
-  bottom: 10%;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .button{
+  /*colours*/
+  background-color: #077777;
+  color: var(--text-color);
+
   /*shape*/
   margin: 5px;
   width: 15vw;
@@ -68,19 +72,26 @@ canvas {
   transition: background-color 0.3s ease;
 }
 
-.share{
-  width: 29%
+.button:hover {
+  background-color: #088888;
 }
 
 .action {
-  /*colours*/
-  background-color: #077777;
-  color: var(--text-color);
-
+  width: auto;
 }
 
-.action:hover {
-  background-color: #088888;
+.copy-message {
+  background-color: #099966;
+  color: var(--text-color);
+}
+
+.copy-message:hover {
+  background-color: #099966;
+  color: var(--text-color);
+}
+
+.social{
+  width: 29%
 }
 
 h1{
@@ -105,10 +116,6 @@ h1{
   margin: 5px;
 }
 
-.copy-message {
-  background-color: #099966;
-  color: var(--text-color);
-}
 
 .spacer{
   height: 50px;
