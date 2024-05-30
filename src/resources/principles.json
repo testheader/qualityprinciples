@@ -84,6 +84,21 @@
       "title": "Slow is smooth and smooth is fast",
       "description": "",
       "source": ["Professional kitchen mantra"]
+    },
+    {
+      "title": "Don't repeat yourself - DRY",
+      "description": "Avoid duplication of code by abstracting common functionality into a single location.",
+      "source": ["The Pragmatic Programmer by Andy Hunt & Dave Thomas", "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"]
+    },
+    {
+      "title": "You ain't gonna need it - YAGNI",
+      "description": "Always implement things when you actually need them, never when you just foresee that you [will] need them.",
+      "source": ["XP co-founder Ron Jeffries", "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"]
+    },
+    {
+      "title": "Keep it simple and stupid - KISS",
+      "description": "",
+      "source": ["Saying popularized by Kelly Johnson", "https://en.wikipedia.org/wiki/KISS_principle"]
     }
   ]
 }
