@@ -30,6 +30,14 @@ canvas {
   position: fixed;
 }
 
+.mobile-center-container{
+  width: 90vw;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 30%;
+  position: absolute;
+}
+
 .principle-container {
   display: flex;
   padding: 20px;
@@ -51,6 +59,21 @@ canvas {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.mobile-button-container{
+  display: flex;
+  flex-direction: column;
+
+  z-index: 10;
+  position: fixed;
+  bottom: 10%;
+  width: 100%;
+}
+
+.share-container{
+  display: flex;
+
 }
 
 .button{
@@ -91,7 +114,12 @@ canvas {
 }
 
 .social{
-  width: 29%
+  width: 100%;
+  float: left;
+}
+
+.mobile-social{
+
 }
 
 h1{
@@ -105,6 +133,11 @@ h1{
 .description{
   font-family: "Rubik", sans-serif;
   color: var(--text-color);
+}
+.mobile-description{
+  font-size: large;
+}
+.desktop-description{
   font-size: x-large;
 }
 
@@ -114,12 +147,13 @@ h1{
   font-size: large;
   font-style: italic;
   margin: 5px;
+  overflow: overlay;
 }
-
 
 .spacer{
   height: 50px;
   color: var(--text-color);
   align-content: end;
+  text-align: center;
 }
 
