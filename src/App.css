@@ -147,7 +147,10 @@ h1{
   font-size: large;
   font-style: italic;
   margin: 5px;
-  overflow: overlay;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Hide scrollbars */
+  display: block;
 }
 
 .spacer{
