@@ -40,9 +40,14 @@ function App() {
     }
 
     const renderSources= () => {
-        return principles.principles[index].source.map(principle => (
-            <p className={"source"}>{principle}</p>
-        ))
+        return principles.principles[index].source.map(principle => {
+            console.log(principle)
+                if (principle.includes("http")) {
+                    return <a className={"source"} target="_blank" href={principle}>{principle}</a>
+                }
+                return <p className={"source"}>{principle}</p>
+            }
+        )
     }
 
     const buildTweet = () => {
