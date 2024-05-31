@@ -43,7 +43,7 @@ function App() {
         return principles.principles[index].source.map(principle => {
             console.log(principle)
                 if (principle.includes("http")) {
-                    return <a className={"source"} target="_blank" href={principle}>{principle}</a>
+                    return <a className={"source"} href={principle} target="_blank" rel="noreferrer">{principle}</a>
                 }
                 return <p className={"source"}>{principle}</p>
             }
