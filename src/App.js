@@ -96,6 +96,11 @@ function App() {
                     <a className={"button social"} href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
             </div>
+            <footer>
+                <p>By Geert van de Lisdonk</p>
+                <p><a href="https://www.linkedin.com/in/geert-van-de-lisdonk-25057049">LinkedIn</a></p>
+                <p><a href="twitter.com/vdlgeert">twitter</a></p>
+            </footer>
         </div>
     );
 }
