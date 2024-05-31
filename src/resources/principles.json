@@ -62,7 +62,7 @@
     },
     {
       "title": "What hinders your task becomes our task",
-      "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill it, it just means you now have a task. Once all obstructions are cleared we finish our original task.",
+      "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill your task, it just means you now have a new task. Once all obstructions are cleared we finish our original task.",
       "source": ["Sanford Meisner"]
     },
     {
@@ -99,6 +99,11 @@
       "title": "Keep it simple and stupid - KISS",
       "description": "We often tend to overcomplicate things. Simplifying will make everything more clear and easier to maintain",
       "source": ["Saying popularized by Kelly Johnson", "https://en.wikipedia.org/wiki/KISS_principle"]
+    },
+    {
+      "title": "Elephant carpaccio",
+      "description": "How do you eat an elephant? You slice it in really small pieces and eat all of them. Some tasks may seem overwhelming but if you divide them in small pieces you'll know how to handle it.",
+      "source": ["Agile exercise"]
     }
   ]
 }
