@@ -78,11 +78,11 @@
     {
       "title": "Sync conversations - Async conclusions",
       "description": "When looking into issues and finding solutions we should try to work synchronously. This allows us to come to conclusions faster. Once these conclusions are reached we document them. This allows us to refer back to them and share them asynchronously.",
-      "source": [""]
+      "source": ["G. van de Lisdonk"]
     },
     {
       "title": "Slow is smooth and smooth is fast",
-      "description": "",
+      "description": "If we do everything as fast as we can, we often make mistakes. So it's better to slow down and work in steady pace. This will make the process more smooth which will result in faster results.",
       "source": ["Professional kitchen mantra"]
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "title": "Keep it simple and stupid - KISS",
-      "description": "",
+      "description": "We often tend to overcomplicate things. Simplifying will make everything more clear and easier to maintain",
       "source": ["Saying popularized by Kelly Johnson", "https://en.wikipedia.org/wiki/KISS_principle"]
     }
   ]
