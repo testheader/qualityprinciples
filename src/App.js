@@ -8,16 +8,16 @@ import {useState} from "react";
 import {isMobile} from "react-device-detect";
 
 function App() {
-    const [overview, setOverview] = useState(false);
+    const [overviewActive, setOverviewActive] = useState(false);
 
     return (
         <div>
             <Routes>
-                <Route path="/" element={<Home isOverviewActive={overview} />}/>
+                <Route path="/" element={<Home isOverviewActive={overviewActive} />}/>
                 <Route path="/overview" element={<Overview />} />
             </Routes>
             <footer >
-                <p onClick={(isMobile)?null:() => setOverview(!overview)}>By Geert van de Lisdonk</p>
+                <p onClick={(isMobile)?null:() => setOverviewActive(!overviewActive)}>By Geert van de Lisdonk</p>
                 <p><a href="https://www.linkedin.com/in/geert-van-de-lisdonk-25057049">LinkedIn</a></p>
                 <p><a href="twitter.com/vdlgeert">twitter</a></p>
             </footer>

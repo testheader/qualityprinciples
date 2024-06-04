@@ -5,34 +5,24 @@ import {useEffect, useState} from "react";
 function Home({isOverviewActive}) {
     const CURRENT_URL = window.location.origin
 
-    const [overviewButton, setOverviewButton] = useState(null)
-
-    useEffect(() => {
-        setOverviewButton(isOverviewActive ? <a className="button action" href="/overview">All principles</a> : null);
-    }, [isOverviewActive]);
-
     const getUrlWithIndex = () => {
         return `${CURRENT_URL}?id=${index}`
     }
 
-    const getInitialIndexFromUrl = () => {
+    const getIndexFromUrl = () => {
         const params = new URLSearchParams(window.location.search);
+        const maxIndexOfPrinciples = principles.principles.length-1
         let id = Math.abs(parseInt(params.get('id'), 10));
-        let numberOfPrinciples = principles.principles.length-1
 
-        if(id>numberOfPrinciples || isNaN(id)){
+        if(id>maxIndexOfPrinciples || isNaN(id)){
             id = Math.floor(Math.random() * principles.principles.length);
         }
 
         return id;
     };
 
-    const [index, setIndex] = useState(getInitialIndexFromUrl());
-    const [showCopyMessage, setShowCopyMessage] = useState(false);
-
     const handleNextPrinciple = () => {
-        const newIndex = principles.principles.length-1===index? 0 : index+1;
-        setIndex(newIndex);
+        setIndex((index+1) % principles.principles.length);
     };
 
     const copyToClipboard = () => {
@@ -77,6 +67,14 @@ function Home({isOverviewActive}) {
 
         return result.toString()
     }
+
+    const [index, setIndex] = useState(getIndexFromUrl());
+    const [showCopyMessage, setShowCopyMessage] = useState(false);
+    const [overviewButton, setOverviewButton] = useState(null)
+
+    useEffect(() => {
+        setOverviewButton(isOverviewActive ? <a className="button action" href="/overview">All principles</a> : null);
+    }, [isOverviewActive]);
 
     return <div>
         <div className={isMobile?"mobile-center-container":"center-container"}>
