@@ -31,6 +31,13 @@ canvas {
   position: fixed;
 }
 
+.center-principles{
+  width: 70vw;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  position: relative;
+}
+
 .mobile-center-container{
   width: 90vw;
   transform: translate(-50%, -50%);
