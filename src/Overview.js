@@ -3,7 +3,6 @@ import React from "react";
 
 function Overview() {
     return <div className={"center-principles"}>
-
         {principles.principles.map((principle, index) => {
             return <div className={"description"}>
                 <h2><a href={`${window.location.origin}?id=${index}`}>{principle.title}</a></h2>

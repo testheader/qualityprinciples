@@ -5,7 +5,6 @@ import Overview from "./Overview";
 
 import {Route, Routes} from "react-router-dom";
 import {useState} from "react";
-import {isMobile} from "react-device-detect";
 
 function App() {
     const [overviewActive, setOverviewActive] = useState(false);
@@ -17,7 +16,7 @@ function App() {
                 <Route path="/overview" element={<Overview />} />
             </Routes>
             <footer >
-                <p onClick={(isMobile)?null:() => setOverviewActive(!overviewActive)}>By Geert van de Lisdonk</p>
+                <p onClick={() => setOverviewActive(!overviewActive)}>By Geert van de Lisdonk</p>
                 <p><a href="https://www.linkedin.com/in/geert-van-de-lisdonk-25057049">LinkedIn</a></p>
                 <p><a href="twitter.com/vdlgeert">twitter</a></p>
             </footer>
