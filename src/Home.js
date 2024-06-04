@@ -3,7 +3,7 @@ import principles from "./resources/principles.json";
 import {useEffect, useState} from "react";
 
 function Home({isOverviewActive}) {
-    const CURRENT_URL = "https://qualityprinciples.netlify.app"
+    const CURRENT_URL = window.location.origin
 
     const [overviewButton, setOverviewButton] = useState(null)
 
@@ -12,15 +12,15 @@ function Home({isOverviewActive}) {
     }, [isOverviewActive]);
 
     const getUrlWithIndex = () => {
-        return CURRENT_URL+"?id=" + index
+        return `${CURRENT_URL}?id=${index}`
     }
 
     const getInitialIndexFromUrl = () => {
         const params = new URLSearchParams(window.location.search);
-        let id = parseInt(params.get('id'), 10);
-        let numberOfPrinciples = principles.principles.length
+        let id = Math.abs(parseInt(params.get('id'), 10));
+        let numberOfPrinciples = principles.principles.length-1
 
-        if(id>numberOfPrinciples || !id){
+        if(id>numberOfPrinciples || isNaN(id)){
             id = Math.floor(Math.random() * principles.principles.length);
         }
 
@@ -67,10 +67,10 @@ function Home({isOverviewActive}) {
     const buildLinkedIn = () => {
         let result = new URL("share", "https://linkedin.com")
         let text =
-            "Found this at " + getUrlWithIndex() + "\n" +
-            principles.principles[index].title + "\n\n" +
-            principles.principles[index].description + "\n\n" +
-            "sources:" + principles.principles[index].source.map(a => " " + a) + "\n"
+            `Found this at ${getUrlWithIndex()}\n` +
+            `${principles.principles[index].title}\n\n` +
+            `${principles.principles[index].description}\n\n` +
+            `sources: ${principles.principles[index].source.map(a => " "+ a)}\n`;
 
         result.searchParams.append("text", text)
         result.searchParams.append("url", getUrlWithIndex())

@@ -81,7 +81,6 @@ canvas {
 
 .share-container{
   display: flex;
-
 }
 
 .button{
@@ -126,10 +125,6 @@ canvas {
   float: left;
 }
 
-.mobile-social{
-
-}
-
 h1{
   font-family: "Ubuntu", sans-serif;
   color: var(--text-color);
@@ -138,13 +133,15 @@ h1{
   font-size: 2rem;
 }
 
-.description{
+.description, a{
   font-family: "Rubik", sans-serif;
   color: var(--text-color);
 }
+
 .mobile-description{
   font-size: 1rem;
 }
+
 .desktop-description{
   font-size: 1.4rem;
 }
@@ -167,6 +164,7 @@ h1{
   align-content: end;
   text-align: center;
 }
+
 footer{
   display: flex;
   flex-direction: row;

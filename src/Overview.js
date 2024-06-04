@@ -3,9 +3,10 @@ import React from "react";
 
 function Overview() {
     return <div className={"center-principles"}>
-        {principles.principles.map(principle => {
+
+        {principles.principles.map((principle, i) => {
             return <div className={"description"}>
-                <h2>{principle.title}</h2>
+                <h2><a href={`${window.location.origin}?id=${i}`}>{principle.title}</a></h2>
                 <p>{principle.description}</p>
                 {principle.source.map(s => {
                     return <p><i>{s}</i></p>
