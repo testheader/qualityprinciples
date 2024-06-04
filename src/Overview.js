@@ -9,9 +9,9 @@ function Overview() {
                 <p>{principle.description}</p>
                 {principle.source.map(source => {
                     if(source.includes("http")){
-                        return <p><a href={source} target="_blank" rel="noreferrer"><i>{source}</i></a></p>
+                        return <p className={"source"} key={source}><a href={source} target="_blank" rel="noreferrer"><i>{source}</i></a></p>
                     }
-                    return <p><i>{source}</i></p>
+                    return <p className={"source"} key={source}><i>{source}</i></p>
                 })}
                 <hr/>
             </div>
