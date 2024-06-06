@@ -85,6 +85,7 @@ canvas {
 
 .firstTimeModal{
   color: var(--text-color);
+  border-radius: 16px;
   position: absolute;
   background-color: #088888;
   width: 50vw;
