@@ -5,7 +5,7 @@ function FirstTimeModal({isFirstTimeProp}) {
     const [isFirstTime] = useState(isFirstTimeProp)
     const [Modal, setModal] = useState(null)
 
-    const ModalHTML = (
+    const [ModalHTML] = useState (
         <div className="firstTimeModal">
             <h1>Welcome</h1>
             <p>
@@ -29,7 +29,7 @@ function FirstTimeModal({isFirstTimeProp}) {
             console.log(`isFirstTime= ${isFirstTime} `)
             setModal(ModalHTML)
         }
-    }, [isFirstTime]);
+    }, [isFirstTime, ModalHTML]);
 
     return Modal
 }
