@@ -70,7 +70,7 @@ function Home({isOverviewActive}) {
 
     const [index, setIndex] = useState(getIndexFromUrl());
     const [showCopyMessage, setShowCopyMessage] = useState(false);
-    const [overviewButton, setOverviewButton] = useState(null)
+    const [overviewButton, setOverviewButton] = useState(null);
 
     useEffect(() => {
         setOverviewButton(isOverviewActive ? <a className="button action" href="/src/components/Overview">All principles</a> : null);
