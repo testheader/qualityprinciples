@@ -4,7 +4,6 @@ import {useEffect, useState} from "react";
 function FirstTimeModal({isFirstTimeProp}) {
     const [isFirstTime] = useState(isFirstTimeProp)
     const [Modal, setModal] = useState(null)
-
     const [ModalHTML] = useState (
         <div className="firstTimeModal">
             <h1>Welcome</h1>
