@@ -1,7 +1,7 @@
 // src/App.js
 import './App.css';
-import Home from "./Home";
-import Overview from "./Overview";
+import Home from "./components/Home";
+import Overview from "./components/Overview";
 
 import {Route, Routes} from "react-router-dom";
 import {useState} from "react";

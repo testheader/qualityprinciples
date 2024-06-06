@@ -1,5 +1,5 @@
 import {isMobile} from "react-device-detect";
-import principles from "./resources/principles.json";
+import principles from "../resources/principles.json";
 import {useEffect, useState} from "react";
 
 function Home({isOverviewActive}) {
@@ -73,7 +73,7 @@ function Home({isOverviewActive}) {
     const [overviewButton, setOverviewButton] = useState(null)
 
     useEffect(() => {
-        setOverviewButton(isOverviewActive ? <a className="button action" href="/overview">All principles</a> : null);
+        setOverviewButton(isOverviewActive ? <a className="button action" href="/src/components/Overview">All principles</a> : null);
     }, [isOverviewActive]);
 
     return <div>

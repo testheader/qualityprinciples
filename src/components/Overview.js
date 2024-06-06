@@ -1,4 +1,4 @@
-import principles from "./resources/principles.json";
+import principles from "../resources/principles.json";
 import React from "react";
 
 function Overview() {
