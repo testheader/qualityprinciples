@@ -14,7 +14,7 @@ function Home({isOverviewActive}) {
     const [overviewButton, setOverviewButton] = useState(null);
 
     useEffect(() => {
-        setOverviewButton(isOverviewActive ? <a className="button action" data-testid={"overviewButton"} href="/src/components/Overview">All principles</a> : null);
+        setOverviewButton(isOverviewActive ? <a className="button action" data-testid={"overviewButton"} href="/overview">All principles</a> : null);
     }, [isOverviewActive]);
 
     const CURRENT_URL = window.location.origin
