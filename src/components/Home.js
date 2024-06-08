@@ -14,7 +14,7 @@ function Home({isOverviewActive}) {
     const [overviewButton, setOverviewButton] = useState(null);
 
     useEffect(() => {
-        setOverviewButton(isOverviewActive ? <a className="button action" href="/src/components/Overview">All principles</a> : null);
+        setOverviewButton(isOverviewActive ? <a className="button action" data-testid={"overviewButton"} href="/src/components/Overview">All principles</a> : null);
     }, [isOverviewActive]);
 
     const CURRENT_URL = window.location.origin
@@ -47,7 +47,7 @@ function Home({isOverviewActive}) {
         return result.toString()
     }
 
-    return <div>
+    return <div data-testid={"homeComponent"}>
         <div className={isMobile?"mobile-center-container":"center-container"}>
             <div className={isMobile?"":"principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
