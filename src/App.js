@@ -6,19 +6,13 @@ import FirstTimeModal from './components/FirstTimeModal';
 
 import {Route, Routes} from "react-router-dom";
 import {useState} from "react";
-import Cookies from 'js-cookie';
 
 function App() {
     const [overviewActive, setOverviewActive] = useState(false);
 
-    const isFirstTime = () => {
-        console.log(Cookies.get("isFirstTime")??true)
-        return Cookies.get("isFirstTime")??true
-    }
-
     return (
         <div>
-            <FirstTimeModal isFirstTimeProp={isFirstTime()}/>
+            <FirstTimeModal />
             <Routes>
                 <Route path="/" element={<Home isOverviewActive={overviewActive} />}/>
                 <Route path="/overview" element={<Overview />} />
