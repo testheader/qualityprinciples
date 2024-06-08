@@ -23,6 +23,30 @@ function Home({isOverviewActive}) {
         return `${CURRENT_URL}?id=${index}`
     }
 
+    const buildTweet = () => {
+        let result = new URL("/intent/tweet", "https://x.com")
+        result.searchParams.append("text", principles.principles[index].title + "\n")
+        result.searchParams.append("url", getUrlWithIndex())
+        result.searchParams.append("via", "vdlgeert")
+        result.searchParams.append("hashtags", "qualityPrinciples")
+
+        return result.toString()
+    };
+
+    const buildLinkedIn = () => {
+        let result = new URL("share", "https://linkedin.com")
+        let text =
+            `Found this at ${getUrlWithIndex()}\n` +
+            `${principles.principles[index].title}\n\n` +
+            `${principles.principles[index].description}\n\n` +
+            `sources: ${principles.principles[index].source.map(a => " "+ a)}\n`;
+
+        result.searchParams.append("text", text)
+        result.searchParams.append("url", getUrlWithIndex())
+
+        return result.toString()
+    }
+
     return <div>
         <div className={isMobile?"mobile-center-container":"center-container"}>
             <div className={isMobile?"":"principle-container"}>
@@ -51,28 +75,8 @@ function Home({isOverviewActive}) {
                 })}> Copy URL </div>}
             {showCopyMessage && <div className={`button action copy-message`}>URL copied to clipboard!</div>}
             <div className="share-container">
-                <a className={"button social"} href={() => {
-                    let result = new URL("/intent/tweet", "https://x.com")
-                    result.searchParams.append("text", principles.principles[index].title + "\n")
-                    result.searchParams.append("url", getUrlWithIndex())
-                    result.searchParams.append("via", "vdlgeert")
-                    result.searchParams.append("hashtags", "qualityPrinciples")
-
-                    return result.toString()
-                }} target="_blank" rel="noreferrer">Tweet</a>
-                <a className={"button social"} href={() => {
-                    let result = new URL("share", "https://linkedin.com")
-                    let text =
-                        `Found this at ${getUrlWithIndex()}\n` +
-                        `${principles.principles[index].title}\n\n` +
-                        `${principles.principles[index].description}\n\n` +
-                        `sources: ${principles.principles[index].source.map(a => " "+ a)}\n`;
-
-                    result.searchParams.append("text", text)
-                    result.searchParams.append("url", getUrlWithIndex())
-
-                    return result.toString()
-                }} target="_blank" rel="noreferrer">LinkedIn</a>
+                <a className={"button social"} href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
+                <a className={"button social"} href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
         </div>
     </div>
