@@ -107,9 +107,8 @@ canvas {
   /*shape*/
   margin: 5px;
   width: 15vw;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
+  border: 15px #077777;
+  padding: 15px 0;
   text-decoration: none;
   display: inline-block;
   font-size: 1.2rem;
