@@ -1,7 +1,7 @@
 import {MemoryRouter} from "react-router-dom";
 import App from "./App";
 
-const TestsWithRouter = () => {
+const TestsWithRouterRoot = () => {
     return (
         <MemoryRouter initialEntries={['/']}>
             <App />
@@ -9,4 +9,12 @@ const TestsWithRouter = () => {
     )
 }
 
-export default TestsWithRouter
+const TestsWithRouterOverview = () => {
+    return (
+        <MemoryRouter initialEntries={['/overview']}>
+            <App />
+        </MemoryRouter>
+    )
+}
+
+export {TestsWithRouterRoot, TestsWithRouterOverview}

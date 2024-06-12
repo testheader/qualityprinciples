@@ -51,23 +51,23 @@ function Home({isOverviewActive}) {
         <div className={isMobile?"mobile-center-container":"center-container"}>
             <div className={isMobile?"":"principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
-                <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`}>{principles.principles[index].description}</p>
+                <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`} data-testid="description">{principles.principles[index].description}</p>
                 {principles.principles[index].source.map(source => {
                             if (source.includes("http")) {
-                                return <a key={source} className={"source"} href={source} target="_blank"
+                                return <a key={source} className={"source"} data-testid="source" href={source} target="_blank"
                                           rel="noreferrer">{source}<br/></a>
                             }
-                            return <p className={"source"}>{source}</p>
+                            return <p className={"source"} data-testid="source">{source}</p>
                         }
                     )
                 }
             </div>
         </div>
         <div className={isMobile ? "mobile-button-container" : "button-container"}>
-            <div className={`button action`} onClick={() => setIndex((index+1) % principles.principles.length)}>Next principle</div>
+            <div className={`button action`} role="button" onClick={() => setIndex((index+1) % principles.principles.length)}>Next principle</div>
             {overviewButton}
             <div className={"spacer"}>Share this principle make the world a better place:</div>
-            {!showCopyMessage && <div className={`button action`} onClick={() =>
+            {!showCopyMessage && <div className={`button action`} role="button" onClick={() =>
                 navigator.clipboard.writeText(getUrlWithIndex())
                 .then(() => {
                     setShowCopyMessage(true);
@@ -75,8 +75,8 @@ function Home({isOverviewActive}) {
                 })}> Copy URL </div>}
             {showCopyMessage && <div className={`button action copy-message`}>URL copied to clipboard!</div>}
             <div className="share-container">
-                <a className={"button social"} href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
-                <a className={"button social"} href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
+                <a className={"button social"} role="button" href={buildTweet()} target="_blank" rel="noreferrer">Tweet</a>
+                <a className={"button social"} role="button" href={buildLinkedIn()} target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
         </div>
     </div>
