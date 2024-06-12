@@ -1,6 +1,7 @@
 import {isMobile} from "react-device-detect";
 import principles from "../resources/principles.json";
 import {useEffect, useState} from "react";
+import {Helmet} from "react-helmet";
 
 function Home({isOverviewActive}) {
     const [index, setIndex] = useState(() => {
@@ -48,15 +49,25 @@ function Home({isOverviewActive}) {
     }
 
     return <div data-testid={"homeComponent"}>
-        <div className={isMobile?"mobile-center-container":"center-container"}>
-            <div className={isMobile?"":"principle-container"}>
+        <Helmet>
+            <meta name="twitter:card" content="summary"/>
+            <meta name="twitter:site" content="@vdlgeert"/>
+            <meta name="twitter:creator" content="@vdlgeert"/>
+            <meta property="og:url" content={getUrlWithIndex()}/>
+            <meta property="og:title" content={principles.principles[index].title}/>
+            <meta property="og:description" content={principles.principles[index].description}/>
+            <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"/>
+        </Helmet>
+
+        <div className={isMobile ? "mobile-center-container" : "center-container"}>
+            <div className={isMobile ? "" : "principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
                 <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`}>{principles.principles[index].description}</p>
                 {principles.principles[index].source.map(source => {
-                            if (source.includes("http")) {
-                                return <a key={source} className={"source"} href={source} target="_blank"
-                                          rel="noreferrer">{source}<br/></a>
-                            }
+                        if (source.includes("http")) {
+                            return <a key={source} className={"source"} href={source} target="_blank"
+                                      rel="noreferrer">{source}<br/></a>
+                        }
                             return <p className={"source"}>{source}</p>
                         }
                     )
