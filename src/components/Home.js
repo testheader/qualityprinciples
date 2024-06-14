@@ -53,14 +53,12 @@ function Home({isOverviewActive}) {
             <meta name="twitter:description" content={principles.principles[index].description}/>
             <meta name="twitter:site" content="@vdlgeert"/>
             <meta name="twitter:creator" content="@vdlgeert"/>
-            <name name="twitter:image" content={"../resources/img.png"}/>
             <name name="twitter:title" content={principles.principles[index].title}/>
             <meta name="author" content="Geert van de Lisdonk"/>
             <meta name="type" property="og:type" content="website"/>
             <meta name="url" property="og:url" content={getUrlWithIndex()}/>
             <meta name="title" property="og:title" content={principles.principles[index].title}/>
             <meta name="description" property="og:description" content={principles.principles[index].description}/>
-            <meta name="image" property="og:image" content="../resources/img.png"/>
             <meta name="site_name" property="og:site_name" content="Quality Principles"/>
         </Helmet>
 
