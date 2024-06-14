@@ -60,6 +60,7 @@ function Home({isOverviewActive}) {
             <meta name="title" property="og:title" content={principles.principles[index].title}/>
             <meta name="description" property="og:description" content={principles.principles[index].description}/>
             <meta name="site_name" property="og:site_name" content="Quality Principles"/>
+            <meta name="image" property="og:image" content="../resources/img.png"/>
         </Helmet>
 
         <div className={isMobile ? "mobile-center-container" : "center-container"}>
