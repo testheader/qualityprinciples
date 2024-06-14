@@ -92,7 +92,7 @@
     },
     {
       "title": "You ain't gonna need it - YAGNI",
-      "description": "Always implement things when you actually need them, never when you just foresee that you [will] need them.",
+      "description": "Always implement things when you actually need them, never when you just foresee that you will need them.",
       "source": ["XP co-founder Ron Jeffries", "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"]
     },
     {
