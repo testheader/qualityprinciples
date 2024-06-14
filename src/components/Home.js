@@ -2,7 +2,6 @@ import {isMobile} from "react-device-detect";
 import principles from "../resources/principles.json";
 import {useEffect, useState} from "react";
 import {Helmet} from "react-helmet";
-
 function Home({isOverviewActive}) {
     const [index, setIndex] = useState(() => {
                 let id = Math.abs(parseInt(new URLSearchParams(window.location.search).get('id'), 10));
@@ -49,6 +48,8 @@ function Home({isOverviewActive}) {
     }
 
     return <div data-testid={"homeComponent"}>
+        <img src="../../.netlify/images/img.png" alt="img"/>
+
         <Helmet>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:description" content={principles.principles[index].description}/>
@@ -61,7 +62,7 @@ function Home({isOverviewActive}) {
             <meta name="url" property="og:url" content={getUrlWithIndex()}/>
             <meta name="title" property="og:title" content={principles.principles[index].title}/>
             <meta name="description" property="og:description" content={principles.principles[index].description}/>
-            <meta name="image" property="og:image" content="../resources/img.png"/>
+            <meta name="image" property="og:image" content="https://deploy-preview-2--qualityprinciples.netlify.app/resources/img.png"/>
             <meta name="site_name" property="og:site_name" content="Quality Principles"/>
         </Helmet>
 
