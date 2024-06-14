@@ -119,7 +119,8 @@
       "title": "The grass doesn't grow faster if you pull on it.",
       "description": "Some process can't be forced. They must be nurtured and grow over time. Give space for them to sprout and time for them to grow.",
       "source": ["African proverb"]
-    },{
+    },
+    {
       "title": "Three amigos principle",
       "description": "Some tasks require multiple perspectives. The analyst, developer and tester all have an equally valuable opinion and can contribute in their own unique ways. Before, during and after development. Each one has their own specialization but can weigh in on others' tasks.",
       "source": ["Agile principle"]
