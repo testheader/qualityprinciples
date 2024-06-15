@@ -92,7 +92,7 @@
     },
     {
       "title": "You ain't gonna need it - YAGNI",
-      "description": "Always implement things when you actually need them, never when you just foresee that you [will] need them.",
+      "description": "Always implement things when you actually need them, never when you just foresee that you will need them.",
       "source": ["XP co-founder Ron Jeffries", "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"]
     },
     {
@@ -104,6 +104,26 @@
       "title": "Elephant carpaccio",
       "description": "How do you eat an elephant? You slice it in really small pieces and eat all of them. Some tasks may seem overwhelming but if you divide them in small pieces you'll know how to handle it.",
       "source": ["Agile exercise"]
+    },
+    {
+      "title": "9 women can’t make a baby in a month",
+      "description" : "Just because you add more resources doesn't mean you go faster. Some tasks need to be performed in order and can't be sped up by parallelization.",
+      "source": ["Warren buffet"]
+    },
+    {
+      "title": "Test must be FIRST",
+      "description": "FIRST is an mnemonic that states that test must be Fast, Independent, Reliable, Self-verifying, Timely. ",
+      "source": ["https://github.com/tekguard/Principles-of-Unit-Testing"]
+    },
+    {
+      "title": "The grass doesn't grow faster if you pull on it.",
+      "description": "Some process can't be forced. They must be nurtured and grow over time. Give space for them to sprout and time for them to grow.",
+      "source": ["African proverb"]
+    },
+    {
+      "title": "Three amigos principle",
+      "description": "Some tasks require multiple perspectives. The analyst, developer and tester all have an equally valuable opinion and can contribute in their own unique ways. Before, during and after development. Each one has their own specialization but can weigh in on others' tasks.",
+      "source": ["Agile principle"]
     }
   ]
 }
