@@ -1,6 +1,7 @@
 import {isMobile} from "react-device-detect";
 import principles from "../resources/principles.json";
 import {useEffect, useState} from "react";
+import {Helmet} from "react-helmet";
 
 function Home({isOverviewActive}) {
     const [index, setIndex] = useState(() => {
@@ -48,7 +49,25 @@ function Home({isOverviewActive}) {
     }
 
     return <div data-testid={"homeComponent"}>
-        <div className={isMobile?"mobile-center-container":"center-container"}>
+
+        <Helmet>
+            <meta name="robots" content="max-image-preview:large"/>
+
+            <meta name="twitter:card" content="summary_large"/>
+            <meta name="description" content={principles.principles[index].description}/>
+            <meta name="twitter:site" content="@vdlgeert"/>
+            <meta name="twitter:creator" content="@vdlgeert"/>
+            <name name="twitter:title" property="twitter:title" content={principles.principles[index].title}/>
+            <meta name="author" content="Geert van de Lisdonk"/>
+
+            <meta name="type" property="og:type" content="website"/>
+            <meta name="url" property="og:url" content={getUrlWithIndex()}/>
+            <meta name="title" property="og:title" content={principles.principles[index].title}/>
+            <meta property="og:description" content={principles.principles[index].description}/>
+            <meta name="site_name" property="og:site_name" content="Quality Principles"/>
+        </Helmet>
+
+        <div className={isMobile ? "mobile-center-container":"center-container"}>
             <div className={isMobile?"":"principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
                 <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`}>{principles.principles[index].description}</p>
