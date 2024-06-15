@@ -48,19 +48,21 @@ function Home({isOverviewActive}) {
     }
 
     return <div data-testid={"homeComponent"}>
+        <img src="../images/img.png" />
+
         <Helmet>
             <meta name="twitter:card" content="summary_large_image"/>
-            <meta name="twitter:description" content={principles.principles[index].description}/>
+            <meta name="twitter:description" property="twitter:description" content={principles.principles[index].description}/>
             <meta name="twitter:site" content="@vdlgeert"/>
             <meta name="twitter:creator" content="@vdlgeert"/>
             <name name="twitter:title" property="twitter:title" content={principles.principles[index].title}/>
             <meta name="author" content="Geert van de Lisdonk"/>
+
             <meta name="type" property="og:type" content="website"/>
             <meta name="url" property="og:url" content={getUrlWithIndex()}/>
             <meta name="title" property="og:title" content={principles.principles[index].title}/>
             <meta name="description" property="og:description" content={principles.principles[index].description}/>
             <meta name="site_name" property="og:site_name" content="Quality Principles"/>
-            <meta name="image" property="og:image" content="../../public/images/img.png"/>
         </Helmet>
 
         <div className={isMobile ? "mobile-center-container" : "center-container"}>
