@@ -49,7 +49,7 @@ function Home({isOverviewActive}) {
 
     return <div data-testid={"homeComponent"}>
         <div className={isMobile?"mobile-center-container":"center-container"}>
-            <div className={isMobile?"":"principle-container"}>
+            <div id="principle-container" className= {"principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
                 <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`}>{principles.principles[index].description}</p>
                 {principles.principles[index].source.map(source => {
@@ -64,7 +64,13 @@ function Home({isOverviewActive}) {
             </div>
         </div>
         <div className={isMobile ? "mobile-button-container" : "button-container"}>
-            <div className={`button action`} onClick={() => setIndex((index+1) % principles.principles.length)}>Next principle</div>
+            <div className={`button action`} onClick={() => {
+                document.getElementById('principle-container').className = 'principle-container animate';
+                setTimeout(() => {
+                    setIndex((index + 1) % principles.principles.length)
+                    document.getElementById('principle-container').className = 'principle-container';
+                }, 600);
+            }}>Next principle</div>
             {overviewButton}
             <div className={"spacer"}>Share this principle make the world a better place:</div>
             {!showCopyMessage && <div className={`button action`} onClick={() =>
