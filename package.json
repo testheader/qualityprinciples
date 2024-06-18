@@ -3,22 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^4.1.1",
+    "react-helmet": "^6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:cy": "cypress open",
+    "cy:install": "cypress install --force"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +37,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.12.39",
+    "@cypress/instrument-cra": "^1.4.0",
+    "@testing-library/cypress": "^10.0.2",
+    "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "^13.11.0"
   }
 }
