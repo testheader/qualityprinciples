@@ -68,7 +68,7 @@ function Home({isOverviewActive}) {
         </Helmet>
 
         <div className={isMobile ? "mobile-center-container":"center-container"}>
-            <div id="principle-container" className= {"principle-container"}>
+            <div id="principle-container" className= {isMobile ? "" : "principle-container"}>
                 <h1>{principles.principles[index].title}</h1>
                 <p className={`description ${isMobile ? 'mobile-description' : 'desktop-description'}`} data-testid="description">{principles.principles[index].description}</p>
                 {principles.principles[index].source.map(source => {
