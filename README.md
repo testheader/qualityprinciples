@@ -26,3 +26,5 @@ Routing happens in App.js
 - the code on `main` is published with netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e63e4be6-95ee-44d2-aeac-452e8598e4fb/deploy-status)](https://app.netlify.com/sites/qualityprinciples/deploys)
 - Each PR gets it own temporary link to try out. Netlify will add a comment in it.
+### Tests
+- Compenents are tested with cypress: [![qualityprinciples](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/detailed/ifgcob/main&style=for-the-badge&logo=cypress)](https://cloud.cypress.io/projects/ifgcob/runs)
