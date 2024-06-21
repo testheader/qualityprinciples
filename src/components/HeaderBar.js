@@ -30,8 +30,8 @@ function HeaderBar({principle}) {
 
     const homePageSocials = () => {
         return <div className={"rightAlign"}>
-            <a className={"icon"} href={buildTweet()} target="_blank"><TwitterIcon/></a>
-            <a className={"icon"} href={buildLinkedIn()} target="_blank"><LinkedinIcon/></a>
+            <a className={"icon"} href={buildTweet()} rel="noreferrer" target="_blank"><TwitterIcon/></a>
+            <a className={"icon"} href={buildLinkedIn()} rel="noreferrer" target="_blank"><LinkedinIcon/></a>
             <div className={"icon"} onClick={() => navigator.clipboard.writeText(principle.url)}>
                 <CopyIcon/>
             </div>
@@ -48,7 +48,7 @@ function HeaderBar({principle}) {
 
     return <div className={"headerBar"}>
         <div className={"leftAlign"}>
-            <h1><a className={"HeaderTitle"} href={"/"} target="_parent">Quality Principles</a></h1>
+            <h1><a className={"HeaderTitle"} href={"/"}  target="_parent">Quality Principles</a></h1>
             <a className={"icon"} href={"/overview"} target="_parent"> <ListIcon classname={"icon"}/></a>
         </div>
         {(window.location.pathname !== "/overview") ?
