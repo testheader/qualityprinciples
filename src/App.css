@@ -2,14 +2,12 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #111111;
-  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-  radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  background-color: #EEEEEE;
   font-size: 16px;
 }
 
 :root {
-  --text-color: aliceblue;
+  --text-color: #111111;
 }
 
 canvas {
@@ -24,11 +22,7 @@ canvas {
 }
 
 .center-container{
-  width: 66vw;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 33%;
-  position: fixed;
+  height: 50vh;
 }
 
 .center-principles{
@@ -103,6 +97,11 @@ canvas {
   display: flex;
 }
 
+.principleNavigation{
+  display: flex;
+  justify-content: center;
+}
+
 .firstTimeModal{
   color: var(--text-color);
   border-radius: 16px;
@@ -119,14 +118,14 @@ canvas {
 }
 
 
-.button{
+.navigationbutton{
   /*colours*/
-  background-color: #077777;
-  color: var(--text-color);
+  background-color: #111111;
+  color: #EEEEEE;
 
   /*shape*/
   margin: 5px;
-  width: 15vw;
+  width: 10vw;
   border: 15px #077777;
   padding: 15px 0;
   border-radius: 8px;
@@ -135,17 +134,22 @@ canvas {
   /*text props*/
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1.2rem;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 
-.button:hover {
-  background-color: #088888;
+.navigationbutton:hover {
+  background-color: #222222;
 }
 
-.action {
-  width: auto;
+.navigationbutton:active {
+  background-color: #333333;
 }
 
 .copy-message {

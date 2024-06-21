@@ -10,7 +10,11 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^6.1.11",
+    "@mui/material" : "^5.15.20",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.4"
   },
   "scripts": {
     "start": "react-scripts start",
