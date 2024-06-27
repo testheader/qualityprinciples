@@ -1,6 +1,15 @@
 import {CopyIcon, LinkedinIcon, ListIcon, TwitterIcon} from "../resources/Icons";
 import '../styles/HeaderBar.css'
+import {useEffect, useState} from "react";
 function HeaderBar({principle}) {
+    const [isCopied, setIsCopied] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => setIsCopied(false), 2000);
+        return () => clearTimeout(timeout);
+    }, [isCopied]);
+
+
     const buildTweet = () => {
         let result = new URL("/intent/tweet", "https://x.com")
         result.searchParams.append("text", principle.title + "\n")
@@ -29,7 +38,10 @@ function HeaderBar({principle}) {
         return <div className={"rightAlign"}>
             <a className={"icon"} href={buildTweet()} rel="noreferrer" target="_blank"><TwitterIcon/></a>
             <a className={"icon"} href={buildLinkedIn()} rel="noreferrer" target="_blank"><LinkedinIcon/></a>
-            <div className={"icon"} onClick={() => navigator.clipboard.writeText(principle.url)}>
+            <div className={`${isCopied? 'isCopied':''} icon`} onClick={() => {
+                setIsCopied(true);
+                navigator.clipboard.writeText(principle.url)
+            }}>
                 <CopyIcon/>
             </div>
         </div>

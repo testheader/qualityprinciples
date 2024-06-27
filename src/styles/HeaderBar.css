@@ -29,6 +29,7 @@
 .icon{
     padding: 10px;
     border-radius: 8px;
+    transition: background-color 0.5s ease;
 }
 
 .icon:hover{
@@ -37,6 +38,11 @@
 
 .icon:active{
     background-color: #333333;
+}
+
+.isCopied, .isCopied:hover{
+    background-color: #099966;
+    transition: background-color 0.5s ease;
 }
 
 .HeaderTitle{

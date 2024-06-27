@@ -147,7 +147,6 @@ function LightbulbIcon(props) {
     )
 }
 
-
 export {
     ChevronLeftIcon,
     ChevronRightIcon,
