@@ -120,8 +120,8 @@ canvas {
 
 .navigationbutton{
   /*colours*/
-  background-color: #111111;
-  color: #EEEEEE;
+  background-color: #EEEEEE;
+  color: #111111;
 
   /*shape*/
   margin: 5px;
@@ -145,11 +145,11 @@ canvas {
 }
 
 .navigationbutton:hover {
-  background-color: #222222;
+  background-color: #DDDDDD;
 }
 
 .navigationbutton:active {
-  background-color: #333333;
+  background-color: #BBBBBB;
 }
 
 .copy-message {

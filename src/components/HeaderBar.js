@@ -1,4 +1,4 @@
-import {CopyIcon, LinkedinIcon, ListIcon, TwitterIcon} from "../resources/Icons";
+import {CopyIcon, LightbulbIcon, LinkedinIcon, ListIcon, TwitterIcon} from "../resources/Icons";
 import '../styles/HeaderBar.css'
 function HeaderBar({principle}) {
 
@@ -34,6 +34,9 @@ function HeaderBar({principle}) {
             <a className={"icon"} href={buildLinkedIn()} rel="noreferrer" target="_blank"><LinkedinIcon/></a>
             <div className={"icon"} onClick={() => navigator.clipboard.writeText(principle.url)}>
                 <CopyIcon/>
+            </div>
+            <div className={"icon"}>
+                <LightbulbIcon />
             </div>
         </div>
     }
