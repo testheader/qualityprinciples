@@ -9,6 +9,7 @@ import {useState} from "react";
 import HeaderBar from "./components/HeaderBar";
 import principles from "./resources/principles.json";
 import {ChevronLeftIcon, ChevronRightIcon} from "./resources/Icons";
+import {Helmet} from "react-helmet";
 
 function App() {
     const [overviewActive, setOverviewActive] = useState(false);
@@ -29,14 +30,32 @@ function App() {
 
     return (
         <div>
+
+            <Helmet>
+                <meta name="robots" content="max-image-preview:large"/>
+
+                <meta name="twitter:card" content="summary_large"/>
+                <meta name="description" content={currentPrinciple.description}/>
+                <meta name="twitter:site" content="@vdlgeert"/>
+                <meta name="twitter:creator" content="@vdlgeert"/>
+                <name name="twitter:title" property="twitter:title" content={currentPrinciple.title}/>
+                <meta name="author" content="Geert van de Lisdonk"/>
+
+                <meta name="type" property="og:type" content="website"/>
+                <meta name="url" property="og:url" content={currentPrinciple.url}/>
+                <meta name="title" property="og:title" content={currentPrinciple.title}/>
+                <meta property="og:description" content={currentPrinciple.description}/>
+                <meta name="site_name" property="og:site_name" content="Quality Principles"/>
+            </Helmet>
+
             <FirstTimeModal />
             <HeaderBar principle={currentPrinciple}/>
             <Routes>
                 <Route path="/" element={
                     <div>
-                        <Home isOverviewActive={overviewActive} currentPrinciple={currentPrinciple}/>
+                        <Home currentPrinciple={currentPrinciple}/>
                         <div className={`principleNavigation`} >
-                            <div className={`navigationbutton`} role="button" onClick={() => {
+                            <div className={`navigationButton`} role="button" onClick={() => {
                                 document.getElementById('principle-container').className = 'principle-container animate';
                                 setTimeout(() => {
                                     setPrincipleIndex((principles.principles.length + (principleIndex - 1)) % principles.principles.length);
@@ -45,7 +64,7 @@ function App() {
                             }}>
                                 <ChevronLeftIcon/>previous
                             </div>
-                            <div className={`navigationbutton`} role="button" onClick={() => {
+                            <div className={`navigationButton`} role="button" onClick={() => {
                                 document.getElementById('principle-container').className = 'principle-container animate';
                                 setTimeout(() => {
                                     setPrincipleIndex((principleIndex + 1) % principles.principles.length);

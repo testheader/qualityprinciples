@@ -1,6 +1,8 @@
 import {CopyIcon, LinkedinIcon, ListIcon, TwitterIcon} from "../resources/Icons";
 import '../styles/HeaderBar.css'
 import {useEffect, useState} from "react";
+import {isMobile} from "react-device-detect";
+
 function HeaderBar({principle}) {
     const [isCopied, setIsCopied] = useState(false);
 
@@ -57,7 +59,7 @@ function HeaderBar({principle}) {
 
     return <div className={"headerBar"}>
         <div className={"leftAlign"}>
-            <h1><a className={"HeaderTitle"} href={"/"}  target="_parent">Quality Principles</a></h1>
+            {isMobile ?'':<h1><a className={"HeaderTitle"} href={"/"} target="_parent">Quality Principles</a></h1>}
             <a className={"icon"} href={"/overview"} target="_parent"> <ListIcon classname={"icon"}/></a>
         </div>
         {(window.location.pathname !== "/overview") ?
