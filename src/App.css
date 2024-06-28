@@ -25,10 +25,6 @@ canvas {
   z-index: 1;
 }
 
-.canvas{
-  background-color: #111111FF;
-}
-
 .center-container{
   height: 50vh;
 }
@@ -76,33 +72,6 @@ canvas {
 @keyframes in {
   from {opacity: 0;}
   to {opacity: 1;}
-}
-
-.button-container {
-  /*sorting*/
-  display: flex;
-  flex-direction: column;
-
-  /*positions*/
-  z-index: 10;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.mobile-button-container{
-  display: flex;
-  flex-direction: column;
-
-  z-index: 10;
-  position: fixed;
-  bottom: 10%;
-  width: 100%;
-}
-
-.share-container{
-  display: flex;
 }
 
 .principleNavigation{
@@ -169,11 +138,6 @@ canvas {
   color: var(--text-color);
 }
 
-.social{
-  width: 100%;
-  float: left;
-}
-
 h1{
   font-family: "Ubuntu", sans-serif;
   color: var(--text-color);
@@ -205,13 +169,6 @@ h1{
   text-overflow: ellipsis;
   /* Hide scrollbars */
   display: block;
-}
-
-.spacer{
-  height: 50px;
-  color: var(--text-color);
-  align-content: end;
-  text-align: center;
 }
 
 footer{
