@@ -32,25 +32,22 @@ describe('<App />', () => {
             cy.findByRole('heading', {name: 'Welcome'}).should('not.exist')
         });
 
-        it('should show extra button after clicking name', () => {
-            cy.setCookie('isFirstTime', "false");
-            cy.mount(<TestsWithRouterRoot/>)
-            cy.findByText('By Geert van de Lisdonk').click()
-            cy.findByText('All principles').should('exist')
-        })
-
         it('should show all desired items', () => {
             cy.setCookie('isFirstTime', "false");
             cy.mount(<TestsWithRouterRoot/>)
 
-            cy.findByRole('heading').should('exist')
-            cy.findByTestId('description').should('exist')
+            cy.get('#principle-container > h1').should('exist')
+            cy.get('.description').should('exist')
             cy.findAllByTestId('source').should('have.length.above', 0)
 
-            cy.findByRole('button', {name: 'Next principle'}).should('exist')
-            cy.findByRole('button', {name: 'Copy URL'}).should('exist')
-            cy.findByRole('button', {name: 'Tweet'}).should('exist')
-            cy.findByRole('button', {name: 'LinkedIn'}).should('exist')
+            cy.findByRole('button', {name: 'previous'}).should('exist')
+            cy.findByRole('button', {name: 'next'}).should('exist')
+
+            cy.findByTestId('copy', ).should('exist')
+            cy.findByTestId('Tweet principle').should('exist')
+            cy.findByTestId('LinkedIn principle').should('exist')
+            cy.get('.HeaderTitle').should('exist')
+            cy.findByTestId('open overview').should('exist')
 
             cy.findByText('By Geert van de Lisdonk').should('exist')
             cy.findByRole('link', {name: 'twitter'}).should('exist')
@@ -76,12 +73,5 @@ describe('<App />', () => {
             cy.findAllByRole('paragraph').should('have.length.above', 10)
 
         });
-
-        it('should show not extra button after clicking name', () => {
-            cy.setCookie('isFirstTime', "false");
-            cy.mount(<TestsWithRouterOverview/>)
-            cy.findByText('By Geert van de Lisdonk').click()
-            cy.findByText('All principles').should('not.exist')
-        })
     })
 })
