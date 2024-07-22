@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.12.39",
+    "@cypress/code-coverage": "^3.12.44",
     "@cypress/instrument-cra": "^1.4.0",
     "@testing-library/cypress": "^10.0.2",
     "babel-plugin-istanbul": "^6.1.1",
