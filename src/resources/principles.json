@@ -61,7 +61,7 @@
       "source": ["A quote by scouts founder R. Baden-Powell"]
     },
     {
-      "title": "What hinders your task becomes our task",
+      "title": "What hinders your task becomes your task",
       "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill your task, it just means you now have a new task. Once all obstructions are cleared we finish our original task.",
       "source": ["Sanford Meisner"]
     },
@@ -123,6 +123,11 @@
     {
       "title": "Three amigos principle",
       "description": "Some tasks require multiple perspectives. The analyst, developer and tester all have an equally valuable opinion and can contribute in their own unique ways. Before, during and after development. Each one has their own specialization but can weigh in on others' tasks.",
+      "source": ["Agile principle"]
+    },
+    {
+      "title": "Skateboard principle",
+      "description": "Instead of building the perfect product from scratch, deliver a simple, working version early — like starting with a skateboard before building a car. This way, users get value immediately and you can improve based on real feedback.",
       "source": ["Agile principle"]
     }
   ]
