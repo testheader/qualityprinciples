@@ -2,14 +2,22 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #111111;
-  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-  radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  --bg-color: #EEEEEE;
+  background-color: var(--bg-color);
   font-size: 16px;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: #111111;
+    --bg-modal-color: #333333;
+    --text-color: #ffffff;
+  }
+  /* Update other styles for dark mode */
+}
+
 :root {
-  --text-color: aliceblue;
+  --text-color: #111111;
 }
 
 canvas {
@@ -19,16 +27,9 @@ canvas {
   z-index: 1;
 }
 
-.canvas{
-  background-color: #111111FF;
-}
-
 .center-container{
-  width: 66vw;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 33%;
-  position: fixed;
+  min-height: 50vh;
+  max-height: calc(70vh - 60px) !important;
 }
 
 .center-principles{
@@ -55,6 +56,8 @@ canvas {
   justify-content: center;
   flex-wrap: nowrap;
 
+  height: inherit;
+
   animation-duration: 0.6s;
   animation-name: in;
   animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -76,38 +79,16 @@ canvas {
   to {opacity: 1;}
 }
 
-.button-container {
-  /*sorting*/
+.principleNavigation{
   display: flex;
-  flex-direction: column;
-
-  /*positions*/
-  z-index: 10;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.mobile-button-container{
-  display: flex;
-  flex-direction: column;
-
-  z-index: 10;
-  position: fixed;
-  bottom: 10%;
-  width: 100%;
-}
-
-.share-container{
-  display: flex;
+  justify-content: center;
 }
 
 .firstTimeModal{
   color: var(--text-color);
   border-radius: 16px;
   position: absolute;
-  background-color: #088888;
+  background-color: var(--bg-modal-color);
   width: 50vw;
   transform: translate(21vw, 50%);
   padding: 20px;
@@ -118,15 +99,15 @@ canvas {
   font-family: "Ubuntu", sans-serif;
 }
 
-
-.button{
+.navigationButton{
   /*colours*/
-  background-color: #077777;
-  color: var(--text-color);
+  background-color: #EEEEEE;
+  color: #111111;
 
   /*shape*/
   margin: 5px;
-  width: 15vw;
+  width: 10vw;
+  min-width:180px;
   border: 15px #077777;
   padding: 15px 0;
   border-radius: 8px;
@@ -135,17 +116,22 @@ canvas {
   /*text props*/
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 1.2rem;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 
-.button:hover {
-  background-color: #088888;
+.navigationbutton:hover {
+  background-color: #DDDDDD;
 }
 
-.action {
-  width: auto;
+.navigationbutton:active {
+  background-color: #BBBBBB;
 }
 
 .copy-message {
@@ -156,11 +142,6 @@ canvas {
 .copy-message:hover {
   background-color: #099966;
   color: var(--text-color);
-}
-
-.social{
-  width: 100%;
-  float: left;
 }
 
 h1{
@@ -194,13 +175,7 @@ h1{
   text-overflow: ellipsis;
   /* Hide scrollbars */
   display: block;
-}
-
-.spacer{
-  height: 50px;
-  color: var(--text-color);
-  align-content: end;
-  text-align: center;
+  max-width: 90vw;
 }
 
 footer{

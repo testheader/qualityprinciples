@@ -1,0 +1,52 @@
+.headerBar{
+    background-color: #111111;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftAlign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(20px);
+}
+
+.rightAlign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.icon{
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.icon:hover{
+    background-color: #222222;
+}
+
+.icon:active{
+    background-color: #333333;
+}
+
+.isCopied, .isCopied:hover{
+    background-color: #099966;
+    transition: background-color 0.5s ease;
+}
+
+.HeaderTitle{
+    text-decoration: none;
+    color: #EEEEEE;
+    padding: 5px;
+}
