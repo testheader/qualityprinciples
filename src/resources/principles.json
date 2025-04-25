@@ -129,6 +129,11 @@
       "title": "Skateboard principle",
       "description": "Instead of building the perfect product from scratch, deliver a simple, working version early — like starting with a skateboard before building a car. This way, users get value immediately and you can improve based on real feedback.",
       "source": ["Agile principle"]
+    },
+    {
+      "title": "Bicycle principle",
+      "description": "When testing a bicycle you can try to jump on it and try to ride it. But if the chain is broken and the tire is flat there's no point in doing that. We try to verify the parts before we test the whole. It helps us lecate defects in their respective components and help us solve issues faster.",
+      "source": ["G. van de Lisdonk"]
     }
   ]
 }
