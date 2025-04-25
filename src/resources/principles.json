@@ -132,7 +132,7 @@
     },
     {
       "title": "Bicycle principle",
-      "description": "When testing a bicycle you can try to jump on it and try to ride it. But if the chain is broken and the tire is flat there's no point in doing that. We try to verify the parts before we test the whole. It helps us lecate defects in their respective components and help us solve issues faster.",
+      "description": "When testing a bicycle you can try to jump on it and try to ride it. But if the chain is broken and the tire is flat there's no point in doing that. We try to verify the parts before we test the whole. It helps us locate defects in their respective components and help us solve issues faster.",
       "source": ["G. van de Lisdonk"]
     }
   ]
