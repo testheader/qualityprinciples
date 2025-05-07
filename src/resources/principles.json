@@ -156,14 +156,9 @@
       "source": ["Agile/DevOps principle", "https://en.wikipedia.org/wiki/CI/CD"]
     },
     {
-      "title": "Everything as Code",
-      "description": "Anything that can be defined — infrastructure, tests, pipelines, policies — should be treated like code. That means it’s readable, changeable, and version-controlled, just like any other part of our system.",
-      "source": ["DevOps principle", "https://www.ibm.com/cloud/blog/everything-as-code"]
-    },
-    {
       "title": "Fail Fast, Fail forward",
       "description": "We want to know as soon as something goes wrong. So instead of letting bad data or broken logic keep going, we stop early, report it clearly, and fix it before things get worse.",
-      "source": ["Agile principle", "https://martinfowler.com/bliki/FailFast.html"]
+      "source": ["Agile principle", "https://en.wikipedia.org/wiki/Fail-fast_system"]
     },
     {
       "title": "Immutable Infrastructure",
@@ -178,7 +173,7 @@
     {
       "title": "Security as Code",
       "description": "We treat security like part of our software, not an afterthought. That means writing it, testing it, and automating it — just like the rest of our code — so it’s built in from the start.",
-      "source": ["DevSecOps principle", "https://owasp.org/www-community/DevSecOps"]
+      "source": ["DevSecOps principle", "https://owasp.org/www-project-devsecops-guideline/"]
     }
   ]
 }
