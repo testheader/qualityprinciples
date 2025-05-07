@@ -139,6 +139,46 @@
       "title": "You build it, you run it",
       "description": "When building software, you can write the code and ship it right away, but if it crashes in production and no one knows how to fix it, you're stuck; so we build and run it ourselves, because owning the whole lifecycle helps us catch issues early and fix them fast.",
       "source": ["DevOps principle"]
+    },
+        {
+      "title": "Shift Left",
+      "description": "It’s better to find mistakes early than to fix them late. So we move testing, code reviews, and security checks earlier in the process. That way we avoid building on top of broken foundations and save time and effort down the road.",
+      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Shift-left_testing"]
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Instead of manually configuring servers, we describe our infrastructure using code. This way we can version it, test it, and automate it — just like we do with our applications.",
+      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Infrastructure_as_code"]
+    },
+    {
+      "title": "Continuous Integration / Continuous Delivery",
+      "description": "We don’t wait until the end of a project to integrate or deliver — we do it continuously. That means merging code often and automating testing and deployment so we can release changes quickly and safely.",
+      "source": ["Agile/DevOps principle", "https://en.wikipedia.org/wiki/CI/CD"]
+    },
+    {
+      "title": "Everything as Code",
+      "description": "Anything that can be defined — infrastructure, tests, pipelines, policies — should be treated like code. That means it’s readable, changeable, and version-controlled, just like any other part of our system.",
+      "source": ["DevOps principle", "https://www.ibm.com/cloud/blog/everything-as-code"]
+    },
+    {
+      "title": "Fail Fast, Fail forward",
+      "description": "We want to know as soon as something goes wrong. So instead of letting bad data or broken logic keep going, we stop early, report it clearly, and fix it before things get worse.",
+      "source": ["Agile principle", "https://martinfowler.com/bliki/FailFast.html"]
+    },
+    {
+      "title": "Immutable Infrastructure",
+      "description": "We don’t patch or tweak running systems. We replace them. This avoids hidden differences and makes our environments predictable and easy to recreate.",
+      "source": ["DevOps principle", "https://martinfowler.com/bliki/ImmutableServer.html"]
+    },
+    {
+      "title": "Observability Over Monitoring",
+      "description": "Monitoring tells us when something’s wrong. Observability helps us understand why. We build systems that are easy to debug and explain themselves when things go wrong.",
+      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Observability"]
+    },
+    {
+      "title": "Security as Code",
+      "description": "We treat security like part of our software, not an afterthought. That means writing it, testing it, and automating it — just like the rest of our code — so it’s built in from the start.",
+      "source": ["DevSecOps principle", "https://owasp.org/www-community/DevSecOps"]
     }
   ]
 }
