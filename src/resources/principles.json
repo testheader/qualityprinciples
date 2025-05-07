@@ -163,7 +163,7 @@
     {
       "title": "Immutable Infrastructure",
       "description": "We don’t patch or tweak running systems. We replace them. This avoids hidden differences and makes our environments predictable and easy to recreate.",
-      "source": ["DevOps principle", "https://martinfowler.com/bliki/ImmutableServer.html"]
+      "source": ["DevOps principle", "https://devops.com/immutable-infrastructure-the-next-step-for-devops/"]
     },
     {
       "title": "Observability Over Monitoring",
