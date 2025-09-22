@@ -1,12 +1,9 @@
 import principles from "../resources/principles.json";
-import React,  { useState } from "react";
-import {getAllUniqueTags} from './utils';
+import React, {useState} from "react";
 import TagFilter from "./TagFilter";
 
 
 function Overview() {
-    const allAvailableTagsArray = Array.from(getAllUniqueTags).sort(); // For the filtering logic later
-
     const [selectedTags, setSelectedTags] = useState([]);
 
     // This function is passed down to TagFilter and updates the state here
@@ -20,34 +17,53 @@ function Overview() {
 
     // Filters principles based on selectedTags
     const filteredPrinciples = principles.principles.filter(principle => {
-        // Show all if no tags are selected OR if all available tags are selected
-        if (selectedTags.length === 0 || selectedTags.length === allAvailableTagsArray.length) {
+        // Show all if no tags are selected
+        if (selectedTags.length === 0) {
             return true;
         }
-        // Otherwise, show principles that have at least one of the selected tags
-        return principle.tags.some(principleTag => selectedTags.includes(principleTag));
+
+        // If one tag is selected, show all principles that include that tag
+        if (selectedTags.length === 1) {
+            const selectedTag = selectedTags[0];
+            return principle.tags.includes(selectedTag);
+        }
+
+        // If more than one tag is selected, show only principles that have ALL of the selected tags
+        return selectedTags.every(selectedTag => principle.tags.includes(selectedTag));
     });
 
     return <div>
         <TagFilter
-            principles={principles.principles} 
+            principles={principles.principles}
             selectedTags={selectedTags}
             onTagChange={handleSelectedTagsChange}/>
         <div className={"center-principles"}>
-            {filteredPrinciples.map((principle, index) => {
-                return <div className={"description"} key={principle.title}>
-                    <h2><a href={`${window.location.origin}?id=${index}`}>{principle.title}</a></h2>
-                    <p>{principle.description}</p>
-                    {principle.source.map(source => {
-                        if (source.includes("http")) {
-                            return <p className={"source"} key={source}><a href={source} target="_blank"
-                                                                           rel="noreferrer"><i>{source}</i></a></p>
-                        }
-                        return <p className={"source"} key={source}><i>{source}</i></p>
-                    })}
-                    <hr/>
+
+            {filteredPrinciples.length > 0 ? (
+                filteredPrinciples.map((principle, index) => {
+                        return <div className={"description"} key={principle.title}>
+                            <h2><a href={`${window.location.origin}?id=${index}`}>{principle.title}</a></h2>
+                            <p>{principle.description}</p>
+                            {principle.tags.map(tag => <a>{tag}, </a>)}
+                            {principle.source.map(source => {
+                                if (source.includes("http")) {
+                                    return <p className={"source"} key={source}><a href={source} target="_blank"
+                                                                                   rel="noreferrer"><i>{source}</i></a></p>
+                                }
+                                return <p className={"source"} key={source}><i>{source}</i></p>
+                            })}
+                            <hr/>
+                        </div>
+                    }
+                )
+                ) : (
+
+                <div className="no-principles-message">
+                    <h2>No principles found with tags:</h2>
+                    <h3>{selectedTags.join(', ')}</h3>
                 </div>
-            })}
+                )
+            }
             <div id="filler for footer"><br/><br/></div>
         </div>
     </div>
