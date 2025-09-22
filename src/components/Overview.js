@@ -57,7 +57,6 @@ function Overview() {
                     }
                 )
                 ) : (
-
                 <div className="no-principles-message">
                     <h2>No principles found with tags:</h2>
                     <h3>{selectedTags.join(', ')}</h3>
