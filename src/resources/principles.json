@@ -1,179 +1,442 @@
 {
-  "principles": [
-    {
-      "title": "Stop starting, start finishing",
-      "description": "The best way to make progress is to make sure we finish the task we started. We do this by finishing tasks before we start a new one. Tasks in review have a higher priority than tasks in progress. And tasks in progress have to be finished before we start a new task.",
-      "source": ["Agile principle"]
-    },
-    {
-      "title": "Genchi genbutsu",
-      "description": "Principles that translates to “Real place, real thing” and means “Go and see”. By this we mean that when we encounter issues, everybody tries to help and solve them. Even when you don’t know how or what, you do your best to help out in any way you can.",
-      "source": ["The Toyota Way", "https://en.wikipedia.org/wiki/Genchi_Genbutsu"]
-    },
-    {
-      "title": "No bike-shedding",
-      "description": "This principle comes from the design sphere. When designing an office everybody has an opinion on the color of the bike shed. It’s so very unimportant and is dictated by taste alone. We must be aware that we don’t lose time on matters that don’t help us.",
-      "source": ["design principle"]
-    },
-    {
-      "title": "The size of the cans isn’t decided by the aluminium manufacturer.",
-      "description": "We don’t let our suppliers decide how we do things. Cola doesn’t sell 1 meter tall cans just because the supplier gives them 1 meter tall rolls of aluminum. We know our architecture and how we handle data better. We know the best way to retrieve and provide data. We don’t let our clients or suppliers decide.",
-      "source": ["J. Vandepitte"]
-    },
-    {
-      "title": "If you want to go fast go alone, if you want to go far go together",
-      "description": "Sometimes we want things to go fast and dedicate one person's time. But at some point we’ll want to solidify their efforts and spread the knowledge so everyone can help out later. It’s not bad to focus on one part as long as it’s followed by knowledge spreading.",
-      "source": ["African proverb from Burkina Faso"]
-    },
-    {
-      "title": "Things are the way they are because they go that way",
-      "description": "We build processes over time. And processes form us. We must look at them critically but also accept good reasons for doing them that way. But we must also change processes when we are just doing it because “that’s how we’ve always done it”.",
-      "source": ["Gerald Weinberg in the secrets of consulting", "https://en.wikipedia.org/wiki/Gerald_Weinberg"]
-    },
-    {
-      "title": "12 angry men principle",
-      "description": "A great movie about the jury in a trial. One of the 12 jurors challenged the 11 others that were convinced the perpetrator was guilty. He found that we should at least look at other options and go against our biases. During any point in a discussion it’s useful for one person to take an opposite point and challenge our way of thinking. Not out of spite, but to make sure we’re not making any rash decisions.",
-      "source": ["Movie by Sidney Lumet from a play by Reginald Rose", "https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)"]
-    },
-    {
-      "title": "Orchestration vs. Choreography",
-      "description": "These two design principles help us understand how components interact. Choreography is where each component interacts with other components through an exchange of messages. Orchestration is where a central controller manages a series of complex tasks or workflows. In my experience, it’s better for each service to have its own dedicated task and do that task excellently. When we rely on a central controller things get more complex and entangled.",
-      "source": ["Design principles"]
-    },
-    {
-      "title": "What’s good for the hive is good for the bee",
-      "description": "When working small tasks we sometimes lose track of why we’re doing what we do. We try to keep everyone up to date on why we’re doing things and what our collective goal is. This helps us understand why we do what we do. And allows us to propose improvements that suit our collective goal better.",
-      "source": ["Marcus Aurelius - Roman emperor"]
-    },
-    {
-      "title": "Cargo cult",
-      "description": "In Melanesia there was an indigenous tribe living on islands. These islands were used by the military for a while. And after the war was over, they left everything as is. The tribes started building fake planes, wooden rifles and holding parades, just like the military did. Even if they don’t have any use for it. We must be aware of our process and rituals. We don’t become a (cargo) cult mimicking other companies and doing things ‘because we have to do it’.",
-      "source": ["A ritualistic belief system", "https://en.wikipedia.org/wiki/Cargo_cult"]
-    },
-    {
-      "title": "Test early, Test often",
-      "description": "The sooner we get feedback the sooner we can improve our features. The higher the frequency of our testing, the more times we can improve our features. This principle focuses on creating a small feedback loop that occurs as frequently as possible.",
-      "source": ["Design principle"]
-    },
-    {
-      "title": "The Boy scout rule",
-      "description": "Try and leave this world a little better than you found it. We try and do the same thing on a code level. We improve our codebase every time we use it. We clean up around us and try to make it better in any way we can. When making a change you’ll leave it in cleaner/better/faster/stronger place than you found it.",
-      "source": ["A quote by scouts founder R. Baden-Powell"]
-    },
-    {
-      "title": "What hinders your task becomes your task",
-      "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill your task, it just means you now have a new task. Once all obstructions are cleared we finish our original task.",
-      "source": ["Sanford Meisner"]
-    },
-    {
-      "title": "Write SOLID code.",
-      "description": "A collection of 5 principles: Single-responsibility, Open-Closed, Liskov substitution, Interface segregation, Dependency inversion",
-      "source": ["Acronym by Michael Feathers based on Robert C. Martins paper", "https://en.wikipedia.org/wiki/SOLID"]
-    },
-    {
-      "title": "Graceful exit and fault tolerance",
-      "description": "In cases where we’re not able to return the desired result we answer with a graceful backup. We try not to return errors.",
-      "source": ["https://en.wikipedia.org/wiki/Fault_tolerance","https://en.wikipedia.org/wiki/Graceful_exit"]
-    },
-    {
-      "title": "Sync conversations - Async conclusions",
-      "description": "When looking into issues and finding solutions we should try to work synchronously. This allows us to come to conclusions faster. Once these conclusions are reached we document them. This allows us to refer back to them and share them asynchronously.",
-      "source": ["G. van de Lisdonk"]
-    },
-    {
-      "title": "Slow is smooth and smooth is fast",
-      "description": "If we do everything as fast as we can, we often make mistakes. So it's better to slow down and work in steady pace. This will make the process more smooth which will result in faster results.",
-      "source": ["Professional kitchen mantra"]
-    },
-    {
-      "title": "Don't repeat yourself - DRY",
-      "description": "Avoid duplication of code by abstracting common functionality into a single location.",
-      "source": ["The Pragmatic Programmer by Andy Hunt & Dave Thomas", "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"]
-    },
-    {
-      "title": "You ain't gonna need it - YAGNI",
-      "description": "Always implement things when you actually need them, never when you just foresee that you will need them.",
-      "source": ["XP co-founder Ron Jeffries", "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"]
-    },
-    {
-      "title": "Keep it simple and stupid - KISS",
-      "description": "We often tend to overcomplicate things. Simplifying will make everything more clear and easier to maintain",
-      "source": ["Saying popularized by Kelly Johnson", "https://en.wikipedia.org/wiki/KISS_principle"]
-    },
-    {
-      "title": "Elephant carpaccio",
-      "description": "How do you eat an elephant? You slice it in really small pieces and eat all of them. Some tasks may seem overwhelming but if you divide them in small pieces you'll know how to handle it.",
-      "source": ["Agile exercise"]
-    },
-    {
-      "title": "9 women can’t make a baby in a month",
-      "description" : "Just because you add more resources doesn't mean you go faster. Some tasks need to be performed in order and can't be sped up by parallelization.",
-      "source": ["Warren buffet"]
-    },
-    {
-      "title": "Test must be FIRST",
-      "description": "FIRST is an mnemonic that states that test must be Fast, Independent, Reliable, Self-verifying, Timely. ",
-      "source": ["https://github.com/tekguard/Principles-of-Unit-Testing"]
-    },
-    {
-      "title": "The grass doesn't grow faster if you pull on it.",
-      "description": "Some process can't be forced. They must be nurtured and grow over time. Give space for them to sprout and time for them to grow.",
-      "source": ["African proverb"]
-    },
-    {
-      "title": "Three amigos principle",
-      "description": "Some tasks require multiple perspectives. The analyst, developer and tester all have an equally valuable opinion and can contribute in their own unique ways. Before, during and after development. Each one has their own specialization but can weigh in on others' tasks.",
-      "source": ["Agile principle"]
-    },
-    {
-      "title": "Skateboard principle",
-      "description": "Instead of building the perfect product from scratch, deliver a simple, working version early — like starting with a skateboard before building a car. This way, users get value immediately and you can improve based on real feedback.",
-      "source": ["Agile principle"]
-    },
-    {
-      "title": "Bicycle principle",
-      "description": "When testing a bicycle you can try to jump on it and try to ride it. But if the chain is broken and the tire is flat there's no point in doing that. We try to verify the parts before we test the whole. It helps us locate defects in their respective components and help us solve issues faster.",
-      "source": ["G. van de Lisdonk"]
-    },
-    {
-      "title": "You build it, you run it",
-      "description": "When building software, you can write the code and ship it right away, but if it crashes in production and no one knows how to fix it, you're stuck; so we build and run it ourselves, because owning the whole lifecycle helps us catch issues early and fix them fast.",
-      "source": ["DevOps principle"]
-    },
-        {
-      "title": "Shift Left",
-      "description": "It’s better to find mistakes early than to fix them late. So we move testing, code reviews, and security checks earlier in the process. That way we avoid building on top of broken foundations and save time and effort down the road.",
-      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Shift-left_testing"]
-    },
-    {
-      "title": "Infrastructure as Code",
-      "description": "Instead of manually configuring servers, we describe our infrastructure using code. This way we can version it, test it, and automate it — just like we do with our applications.",
-      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Infrastructure_as_code"]
-    },
-    {
-      "title": "Continuous Integration / Continuous Delivery",
-      "description": "We don’t wait until the end of a project to integrate or deliver — we do it continuously. That means merging code often and automating testing and deployment so we can release changes quickly and safely.",
-      "source": ["Agile/DevOps principle", "https://en.wikipedia.org/wiki/CI/CD"]
-    },
-    {
-      "title": "Fail Fast, Fail forward",
-      "description": "We want to know as soon as something goes wrong. So instead of letting bad data or broken logic keep going, we stop early, report it clearly, and fix it before things get worse.",
-      "source": ["Agile principle", "https://en.wikipedia.org/wiki/Fail-fast_system"]
-    },
-    {
-      "title": "Immutable Infrastructure",
-      "description": "We don’t patch or tweak running systems. We replace them. This avoids hidden differences and makes our environments predictable and easy to recreate.",
-      "source": ["DevOps principle", "https://devops.com/immutable-infrastructure-the-next-step-for-devops/"]
-    },
-    {
-      "title": "Observability Over Monitoring",
-      "description": "Monitoring tells us when something’s wrong. Observability helps us understand why. We build systems that are easy to debug and explain themselves when things go wrong.",
-      "source": ["DevOps principle", "https://en.wikipedia.org/wiki/Observability"]
-    },
-    {
-      "title": "Security as Code",
-      "description": "We treat security like part of our software, not an afterthought. That means writing it, testing it, and automating it — just like the rest of our code — so it’s built in from the start.",
-      "source": ["DevSecOps principle", "https://owasp.org/www-project-devsecops-guideline/"]
-    }
-  ]
+  "principles": {
+    "principles": [
+      {
+        "title": "Stop starting, start finishing",
+        "description": "The best way to make progress is to make sure we finish the task we started. We do this by finishing tasks before we start a new one. Tasks in review have a higher priority than tasks in progress. And tasks in progress have to be finished before we start a new task.",
+        "source": [
+          "Agile principle"
+        ],
+        "tags": [
+          "Agile",
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Genchi genbutsu",
+        "description": "Principles that translates to “Real place, real thing” and means “Go and see”. By this we mean that when we encounter issues, everybody tries to help and solve them. Even when you don’t know how or what, you do your best to help out in any way you can.",
+        "source": [
+          "The Toyota Way",
+          "https://en.wikipedia.org/wiki/Genchi_Genbutsu"
+        ],
+        "tags": [
+          "Collaboration",
+          "Decision-making",
+          "Ownership"
+        ]
+      },
+      {
+        "title": "No bike-shedding",
+        "description": "This principle comes from the design sphere. When designing an office everybody has an opinion on the color of the bike shed. It’s so very unimportant and is dictated by taste alone. We must be aware that we don’t lose time on matters that don’t help us.",
+        "source": [
+          "design principle"
+        ],
+        "tags": [
+          "Efficiency",
+          "Decision-making",
+          "Focus"
+        ]
+      },
+      {
+        "title": "The size of the cans isn’t decided by the aluminium manufacturer.",
+        "description": "We don’t let our suppliers decide how we do things. Cola doesn’t sell 1 meter tall cans just because the supplier gives them 1 meter tall rolls of aluminum. We know our architecture and how we handle data better. We know the best way to retrieve and provide data. We don’t let our clients or suppliers decide.",
+        "source": [
+          "J. Vandepitte"
+        ],
+        "tags": [
+          "Coding",
+          "Ownership",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "If you want to go fast go alone, if you want to go far go together",
+        "description": "Sometimes we want things to go fast and dedicate one person's time. But at some point we’ll want to solidify their efforts and spread the knowledge so everyone can help out later. It’s not bad to focus on one part as long as it’s followed by knowledge spreading.",
+        "source": [
+          "African proverb from Burkina Faso"
+        ],
+        "tags": [
+          "Collaboration",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Things are the way they are because they go that way",
+        "description": "We build processes over time. And processes form us. We must look at them critically but also accept good reasons for doing them that way. But we must also change processes when we are just doing it because “that’s how we’ve always done it”.",
+        "source": [
+          "Gerald Weinberg in the secrets of consulting",
+          "https://en.wikipedia.org/wiki/Gerald_Weinberg"
+        ],
+        "tags": [
+          "Improvement",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "12 angry men principle",
+        "description": "A great movie about the jury in a trial. One of the 12 jurors challenged the 11 others that were convinced the perpetrator was guilty. He found that we should at least look at other options and go against our biases. During any point in a discussion it’s useful for one person to take an opposite point and challenge our way of thinking. Not out of spite, but to make sure we’re not making any rash decisions.",
+        "source": [
+          "Movie by Sidney Lumet from a play by Reginald Rose",
+          "https://en.wikipedia.org/wiki/12_Angry_Men_(1957_film)"
+        ],
+        "tags": [
+          "Decision-making",
+          "Collaboration",
+          "Feedback"
+        ]
+      },
+      {
+        "title": "Orchestration vs. Choreography",
+        "description": "These two design principles help us understand how components interact. Choreography is where each component interacts with other components through an exchange of messages. Orchestration is where a central controller manages a series of complex tasks or workflows. In my experience, it’s better for each service to have its own dedicated task and do that task excellently. When we rely on a central controller things get more complex and entangled.",
+        "source": [
+          "Design principles"
+        ],
+        "tags": [
+          "Coding",
+          "DevOps",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "What’s good for the hive is good for the bee",
+        "description": "When working small tasks we sometimes lose track of why we’re doing what we do. We try to keep everyone up to date on why we’re doing things and what our collective goal is. This helps us understand why we do what we do. And allows us to propose improvements that suit our collective goal better.",
+        "source": [
+          "Marcus Aurelius - Roman emperor"
+        ],
+        "tags": [
+          "Collaboration",
+          "Improvement",
+          "Ownership"
+        ]
+      },
+      {
+        "title": "Cargo cult",
+        "description": "In Melanesia there was an indigenous tribe living on islands. These islands were used by the military for a while. And after the war was over, they left everything as is. The tribes started building fake planes, wooden rifles and holding parades, just like the military did. Even if they don’t have any use for it. We must be aware of our process and rituals. We don’t become a (cargo) cult mimicking other companies and doing things ‘because we have to do it’.",
+        "source": [
+          "A ritualistic belief system",
+          "https://en.wikipedia.org/wiki/Cargo_cult"
+        ],
+        "tags": [
+          "Improvement",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "Test early, Test often",
+        "description": "The sooner we get feedback the sooner we can improve our features. The higher the frequency of our testing, the more times we can improve our features. This principle focuses on creating a small feedback loop that occurs as frequently as possible.",
+        "source": [
+          "Design principle"
+        ],
+        "tags": [
+          "Testing",
+          "Feedback",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "The Boy scout rule",
+        "description": "Try and leave this world a little better than you found it. We try and do the same thing on a code level. We improve our codebase every time we use it. We clean up around us and try to make it better in any way we can. When making a change you’ll leave it in cleaner/better/faster/stronger place than you found it.",
+        "source": [
+          "A quote by scouts founder R. Baden-Powell"
+        ],
+        "tags": [
+          "Coding",
+          "Improvement",
+          "Ownership"
+        ]
+      },
+      {
+        "title": "What hinders your task becomes your task",
+        "description": "Sometimes our tasks are hindered. This doesn’t mean you can’t fulfill your task, it just means you now have a new task. Once all obstructions are cleared we finish our original task.",
+        "source": [
+          "Sanford Meisner"
+        ],
+        "tags": [
+          "Decision-making",
+          "Ownership",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Write SOLID code.",
+        "description": "A collection of 5 principles: Single-responsibility, Open-Closed, Liskov substitution, Interface segregation, Dependency inversion",
+        "source": [
+          "Acronym by Michael Feathers based on Robert C. Martins paper",
+          "https://en.wikipedia.org/wiki/SOLID"
+        ],
+        "tags": [
+          "Coding",
+          "Improvement",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Graceful exit and fault tolerance",
+        "description": "In cases where we’re not able to return the desired result we answer with a graceful backup. We try not to return errors.",
+        "source": [
+          "https://en.wikipedia.org/wiki/Fault_tolerance",
+          "https://en.wikipedia.org/wiki/Graceful_exit"
+        ],
+        "tags": [
+          "Coding",
+          "DevOps",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Sync conversations - Async conclusions",
+        "description": "When looking into issues and finding solutions we should try to work synchronously. This allows us to come to conclusions faster. Once these conclusions are reached we document them. This allows us to refer back to them and share them asynchronously.",
+        "source": [
+          "G. van de Lisdonk"
+        ],
+        "tags": [
+          "Collaboration",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Slow is smooth and smooth is fast",
+        "description": "If we do everything as fast as we can, we often make mistakes. So it's better to slow down and work in steady pace. This will make the process more smooth which will result in faster results.",
+        "source": [
+          "Professional kitchen mantra"
+        ],
+        "tags": [
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Don't repeat yourself - DRY",
+        "description": "Avoid duplication of code by abstracting common functionality into a single location.",
+        "source": [
+          "The Pragmatic Programmer by Andy Hunt & Dave Thomas",
+          "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+        ],
+        "tags": [
+          "Coding",
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "You ain't gonna need it - YAGNI",
+        "description": "Always implement things when you actually need them, never when you just foresee that you will need them.",
+        "source": [
+          "XP co-founder Ron Jeffries",
+          "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"
+        ],
+        "tags": [
+          "Efficiency",
+          "Agile",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "Keep it simple and stupid - KISS",
+        "description": "We often tend to overcomplicate things. Simplifying will make everything more clear and easier to maintain",
+        "source": [
+          "Saying popularized by Kelly Johnson",
+          "https://en.wikipedia.org/wiki/KISS_principle"
+        ],
+        "tags": [
+          "Efficiency",
+          "Coding",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Elephant carpaccio",
+        "description": "How do you eat an elephant? You slice it in really small pieces and eat all of them. Some tasks may seem overwhelming but if you divide them in small pieces you'll know how to handle it.",
+        "source": [
+          "Agile exercise"
+        ],
+        "tags": [
+          "Agile",
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "9 women can’t make a baby in a month",
+        "description": "Just because you add more resources doesn't mean you go faster. Some tasks need to be performed in order and can't be sped up by parallelization.",
+        "source": [
+          "Warren buffet"
+        ],
+        "tags": [
+          "Efficiency",
+          "Agile"
+        ]
+      },
+      {
+        "title": "Test must be FIRST",
+        "description": "FIRST is an mnemonic that states that test must be Fast, Independent, Reliable, Self-verifying, Timely.",
+        "source": [
+          "https://github.com/tekguard/Principles-of-Unit-Testing"
+        ],
+        "tags": [
+          "Testing",
+          "Feedback",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "The grass doesn't grow faster if you pull on it.",
+        "description": "Some process can't be forced. They must be nurtured and grow over time. Give space for them to sprout and time for them to grow.",
+        "source": [
+          "African proverb"
+        ],
+        "tags": [
+          "Improvement",
+          "Agile"
+        ]
+      },
+      {
+        "title": "Three amigos principle",
+        "description": "Some tasks require multiple perspectives. The analyst, developer and tester all have an equally valuable opinion and can contribute in their own unique ways. Before, during and after development. Each one has their own specialization but can weigh in on others' tasks.",
+        "source": [
+          "Agile principle"
+        ],
+        "tags": [
+          "Agile",
+          "Collaboration",
+          "Testing",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "Skateboard principle",
+        "description": "Instead of building the perfect product from scratch, deliver a simple, working version early — like starting with a skateboard before building a car. This way, users get value immediately and you can improve based on real feedback.",
+        "source": [
+          "Agile principle"
+        ],
+        "tags": [
+          "Agile",
+          "Feedback",
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Bicycle principle",
+        "description": "When testing a bicycle you can try to jump on it and try to ride it. But if the chain is broken and the tire is flat there's no point in doing that. We try to verify the parts before we test the whole. It helps us locate defects in their respective components and help us solve issues faster.",
+        "source": [
+          "G. van de Lisdonk"
+        ],
+        "tags": [
+          "Testing",
+          "Decision-making",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "You build it, you run it",
+        "description": "When building software, you can write the code and ship it right away, but if it crashes in production and no one knows how to fix it, you're stuck; so we build and run it ourselves, because owning the whole lifecycle helps us catch issues early and fix them fast.",
+        "source": [
+          "DevOps principle"
+        ],
+        "tags": [
+          "DevOps",
+          "Ownership",
+          "Feedback",
+          "Coding"
+        ]
+      },
+      {
+        "title": "Shift Left",
+        "description": "It’s better to find mistakes early than to fix them late. So we move testing, code reviews, and security checks earlier in the process. That way we avoid building on top of broken foundations and save time and effort down the road.",
+        "source": [
+          "DevOps principle",
+          "https://en.wikipedia.org/wiki/Shift-left_testing"
+        ],
+        "tags": [
+          "DevOps",
+          "Testing",
+          "Efficiency",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Infrastructure as Code",
+        "description": "Instead of manually configuring servers, we describe our infrastructure using code. This way we can version it, test it, and automate it — just like we do with our applications.",
+        "source": [
+          "DevOps principle",
+          "https://en.wikipedia.org/wiki/Infrastructure_as_code"
+        ],
+        "tags": [
+          "DevOps",
+          "Coding",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Continuous Integration / Continuous Delivery",
+        "description": "We don’t wait until the end of a project to integrate or deliver — we do it continuously. That means merging code often and automating testing and deployment so we can release changes quickly and safely.",
+        "source": [
+          "Agile/DevOps principle",
+          "https://en.wikipedia.org/wiki/CI/CD"
+        ],
+        "tags": [
+          "DevOps",
+          "Agile",
+          "Efficiency",
+          "Feedback"
+        ]
+      },
+      {
+        "title": "Fail Fast, Fail forward",
+        "description": "We want to know as soon as something goes wrong. So instead of letting bad data or broken logic keep going, we stop early, report it clearly, and fix it before things get worse.",
+        "source": [
+          "Agile principle",
+          "https://en.wikipedia.org/wiki/Fail-fast_system"
+        ],
+        "tags": [
+          "Agile",
+          "Feedback",
+          "Improvement",
+          "Decision-making"
+        ]
+      },
+      {
+        "title": "Immutable Infrastructure",
+        "description": "We don’t patch or tweak running systems. We replace them. This avoids hidden differences and makes our environments predictable and easy to recreate.",
+        "source": [
+          "DevOps principle",
+          "https://devops.com/immutable-infrastructure-the-next-step-for-devops/"
+        ],
+        "tags": [
+          "DevOps",
+          "Coding",
+          "Efficiency"
+        ]
+      },
+      {
+        "title": "Observability Over Monitoring",
+        "description": "Monitoring tells us when something’s wrong. Observability helps us understand why. We build systems that are easy to debug and explain themselves when things go wrong.",
+        "source": [
+          "DevOps principle",
+          "https://en.wikipedia.org/wiki/Observability"
+        ],
+        "tags": [
+          "DevOps",
+          "Feedback",
+          "Improvement"
+        ]
+      },
+      {
+        "title": "Security as Code",
+        "description": "We treat security like part of our software, not an afterthought. That means writing it, testing it, and automating it — just like the rest of our code — so it’s built in from the start.",
+        "source": [
+          "DevSecOps principle",
+          "https://owasp.org/www-project-devsecops-guideline/"
+        ],
+        "tags": [
+          "DevOps",
+          "Coding",
+          "Testing",
+          "Improvement"
+        ]
+      }
+    ]
+  }
 }
