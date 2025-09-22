@@ -1,5 +1,4 @@
 // src/components/TagFilter.js (or just src/TagFilter.js)
-import React, { useState, useEffect } from 'react';
 import {getAllUniqueTags} from "./utils";
 
 // Helper function to get all unique tags from the principles data
