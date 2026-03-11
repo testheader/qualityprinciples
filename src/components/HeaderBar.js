@@ -31,7 +31,7 @@ function HeaderBar({principle}) {
             <a className={"icon"} data-testid="LinkedIn principle" href={buildLinkedIn()} rel="noreferrer" target="_blank"><LinkedinIcon/></a>
             <div role={"button"} data-testid="copy" className={`${isCopied? 'isCopied':''} icon`} onClick={() => {
                 setIsCopied(true);
-                navigator.clipboard.writeText(principle.url)
+                navigator.clipboard.writeText(principle.url).catch(() => {})
             }}>
                 <CopyIcon/>
             </div>
@@ -39,7 +39,7 @@ function HeaderBar({principle}) {
     }
     const overviewPageSocials = () => {
         return <div className={"rightAlign"}>
-            <div className={"icon"} onClick={() => navigator.clipboard.writeText(window.location.href)}>
+            <div className={"icon"} onClick={() => navigator.clipboard.writeText(window.location.href).catch(() => {})}>
                 <CopyIcon/>
             </div>
         </div>
