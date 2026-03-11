@@ -34,11 +34,7 @@ function App() {
             <Helmet>
                 <meta name="robots" content="max-image-preview:large"/>
 
-                <meta name="twitter:card" content="summary_large"/>
                 <meta name="description" content={currentPrinciple.description}/>
-                <meta name="twitter:site" content="@vdlgeert"/>
-                <meta name="twitter:creator" content="@vdlgeert"/>
-                <name name="twitter:title" property="twitter:title" content={currentPrinciple.title}/>
                 <meta name="author" content="Geert van de Lisdonk"/>
 
                 <meta name="type" property="og:type" content="website"/>
@@ -83,7 +79,6 @@ function App() {
                 <p onClick={() => setOverviewActive(!overviewActive)} data-testid={"showOverview"}>By Geert van de
                     Lisdonk</p>
                 <p><a href="https://www.linkedin.com/in/geert-van-de-lisdonk-25057049">LinkedIn</a></p>
-                <p><a href="twitter.com/vdlgeert">twitter</a></p>
             </footer>
         </div>
     );
