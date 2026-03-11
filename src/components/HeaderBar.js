@@ -14,7 +14,14 @@ function HeaderBar({principle}) {
 
     const buildLinkedIn = () => {
         const shareUrl = `${window.location.origin}/share/${principle.id}/`;
-        let result = new URL("/sharing/share-offsite/", "https://www.linkedin.com");
+        let result = new URL("share", "https://linkedin.com");
+        let text =
+            `Found this at ${shareUrl}\n` +
+            `${principle.title}\n\n` +
+            `${principle.description}\n\n` +
+            `sources: ${principle.source.map(a => " " + a)}\n`;
+
+        result.searchParams.append("text", text);
         result.searchParams.append("url", shareUrl);
         return result.toString();
     }
