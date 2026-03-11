@@ -26,3 +26,11 @@ yarn-error.log*
 
 coverage
 .nyc_output
+
+# Generated OG images (rebuilt at deploy time)
+public/og-images/
+!public/og-images/.gitkeep
+
+# Downloaded fonts for OG image generation
+scripts/Inter-Regular.ttf
+scripts/Inter-Bold.ttf

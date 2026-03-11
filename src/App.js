@@ -22,6 +22,7 @@ function App() {
     });
 
     const currentPrinciple = {
+        id: principles.principles[principleIndex].id,
         title: principles.principles[principleIndex].title,
         description: principles.principles[principleIndex].description,
         url: `${window.location.origin}?id=${principles.principles[principleIndex].id}`,
@@ -41,6 +42,9 @@ function App() {
                 <meta name="url" property="og:url" content={currentPrinciple.url}/>
                 <meta name="title" property="og:title" content={currentPrinciple.title}/>
                 <meta property="og:description" content={currentPrinciple.description}/>
+                <meta property="og:image" content={`https://qualityprinciples.netlify.app/og-images/${currentPrinciple.id}.png`} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta name="site_name" property="og:site_name" content="Quality Principles"/>
             </Helmet>
 
