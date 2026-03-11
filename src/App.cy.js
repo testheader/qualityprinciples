@@ -18,7 +18,6 @@ describe('<App />', () => {
 
             cy.get('.modal-backdrop').should('exist')
             cy.findByRole('dialog').should('exist')
-            cy.get('.modal-icon').should('exist')
             cy.findByText(/curated collection of quality principles/).should('be.visible')
             cy.findByText(/you won't see this message again/).should('be.visible')
         });

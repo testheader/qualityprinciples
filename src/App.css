@@ -124,21 +124,9 @@ canvas {
   animation: modal-slide-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.modal-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #099966, #077777);
-  color: #fff;
-  margin-bottom: 12px;
-}
-
 .firstTimeModal h1 {
   font-size: 2.2rem;
-  margin: 8px 0 12px;
+  margin: 0 0 16px;
 }
 
 .modal-body {
@@ -160,27 +148,23 @@ canvas {
 }
 
 .modal-cta {
-  background: linear-gradient(135deg, #099966, #077777);
-  color: #fff;
+  background-color: #099966;
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  padding: 14px 40px;
-  font-size: 1.15rem;
+  border-radius: 8px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
   font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 4px 14px rgba(9, 153, 102, 0.35);
+  transition: background-color 0.3s ease;
 }
 
 .modal-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(9, 153, 102, 0.45);
+  background-color: #077777;
 }
 
 .modal-cta:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(9, 153, 102, 0.3);
+  background-color: #055555;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -189,9 +173,6 @@ canvas {
   }
   .firstTimeModal {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-  }
-  .modal-cta {
-    box-shadow: 0 4px 14px rgba(9, 153, 102, 0.25);
   }
 }
 
