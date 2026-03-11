@@ -12,19 +12,19 @@ import {ChevronLeftIcon, ChevronRightIcon} from "./resources/Icons";
 import {Helmet} from "react-helmet";
 
 function App() {
-    const [overviewActive, setOverviewActive] = useState(false);
     const [principleIndex, setPrincipleIndex] = useState(() => {
-        let id = Math.abs(parseInt(new URLSearchParams(window.location.search).get('id'), 10));
-        if (id > principles.principles.length - 1 || isNaN(id)) {
-            id = Math.floor(Math.random() * principles.principles.length);
+        const urlId = new URLSearchParams(window.location.search).get('id');
+        const foundIndex = principles.principles.findIndex(p => p.id === urlId);
+        if (foundIndex !== -1) {
+            return foundIndex;
         }
-        return id;
+        return Math.floor(Math.random() * principles.principles.length);
     });
 
     const currentPrinciple = {
         title: principles.principles[principleIndex].title,
         description: principles.principles[principleIndex].description,
-        url: `${window.location.origin}?id=${principleIndex}`,
+        url: `${window.location.origin}?id=${principles.principles[principleIndex].id}`,
         source: principles.principles[principleIndex].source,
     }
 
@@ -76,7 +76,7 @@ function App() {
                 <Route path="/overview" element={<Overview/>}/>
             </Routes>
             <footer data-testid={"footerComponent"}>
-                <p onClick={() => setOverviewActive(!overviewActive)} data-testid={"showOverview"}>By Geert van de
+                <p data-testid={"showOverview"}>By Geert van de
                     Lisdonk</p>
                 <p><a href="https://www.linkedin.com/in/geert-van-de-lisdonk-25057049">LinkedIn</a></p>
             </footer>

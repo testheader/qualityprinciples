@@ -9,7 +9,7 @@ function Home({currentPrinciple}) {
                         return <a key={source} className={"source"} data-testid="source" href={source} target="_blank"
                                   rel="noreferrer">{source}<br/></a>
                     }
-                    return <p className={"source"} data-testid="source">{source}</p>
+                    return <p key={source} className={"source"} data-testid="source">{source}</p>
                 })}
             </div>
         </div>

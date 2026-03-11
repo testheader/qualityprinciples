@@ -7,10 +7,8 @@ function FirstTimeModal() {
 
     useEffect(() => {
         if (isFirstTime === "false") {
-            console.log("not first time")
             setModal("")
         } else {
-            console.log(`isFirstTime= ${isFirstTime} `)
             setModal(
                 <div className="firstTimeModal">
                     <h1>Welcome</h1>

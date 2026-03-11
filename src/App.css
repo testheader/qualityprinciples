@@ -126,11 +126,11 @@ canvas {
   align-items: center;
 }
 
-.navigationbutton:hover {
+.navigationButton:hover {
   background-color: #DDDDDD;
 }
 
-.navigationbutton:active {
+.navigationButton:active {
   background-color: #BBBBBB;
 }
 
