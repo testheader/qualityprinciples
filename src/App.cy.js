@@ -71,5 +71,49 @@ describe('<App />', () => {
             cy.findAllByRole('paragraph').should('have.length.above', 10)
 
         });
+
+        it('should render all 11 tag pills', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterOverview/>)
+
+            cy.get('.tag-pill').should('have.length', 11)
+        });
+
+        it('should toggle active state when a pill is clicked', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterOverview/>)
+
+            cy.get('.tag-pill').first().as('firstPill')
+            cy.get('@firstPill').should('have.attr', 'aria-pressed', 'false')
+
+            cy.get('@firstPill').click()
+            cy.get('@firstPill').should('have.attr', 'aria-pressed', 'true')
+            cy.get('@firstPill').should('have.class', 'tag-pill--active')
+
+            cy.get('@firstPill').click()
+            cy.get('@firstPill').should('have.attr', 'aria-pressed', 'false')
+            cy.get('@firstPill').should('not.have.class', 'tag-pill--active')
+        });
+
+        it('should filter principles when a tag pill is selected', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterOverview/>)
+
+            cy.get('.description').then($all => {
+                const totalCount = $all.length
+
+                cy.contains('.tag-pill', 'Testing').click()
+                cy.get('.description').should('have.length.below', totalCount)
+                cy.get('.description').should('have.length.above', 0)
+            })
+        });
+
+        it('should show all principles when no pills are selected', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterOverview/>)
+
+            cy.get('.tag-pill').filter('[aria-pressed="true"]').should('have.length', 0)
+            cy.get('.description').should('have.length.above', 10)
+        });
     })
 })
