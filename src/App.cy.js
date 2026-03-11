@@ -66,13 +66,14 @@ describe('<App />', () => {
                 .and('have.attr', 'content', '630')
         })
 
-        it('should use LinkedIn share-offsite endpoint', () => {
+        it('should use LinkedIn share-offsite endpoint with share page URL', () => {
             cy.setCookie('isFirstTime', "false");
             cy.mount(<TestsWithRouterRoot/>)
 
             cy.findByTestId('LinkedIn principle')
                 .should('have.attr', 'href')
                 .and('include', 'linkedin.com/sharing/share-offsite/')
+                .and('include', '%2Fshare%2F')
         })
     })
 

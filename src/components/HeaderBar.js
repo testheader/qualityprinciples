@@ -13,8 +13,9 @@ function HeaderBar({principle}) {
 
 
     const buildLinkedIn = () => {
+        const shareUrl = `${window.location.origin}/share/${principle.id}/`;
         let result = new URL("/sharing/share-offsite/", "https://www.linkedin.com");
-        result.searchParams.append("url", principle.url);
+        result.searchParams.append("url", shareUrl);
         return result.toString();
     }
 

@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'og-images');
+const SHARE_DIR = path.join(__dirname, '..', 'public', 'share');
 const PRINCIPLES_PATH = path.join(__dirname, '..', 'src', 'resources', 'principles.json');
+const SITE_URL = 'https://qualityprinciples.netlify.app';
 
 const WIDTH = 1200;
 const HEIGHT = 630;
@@ -10,6 +12,38 @@ const HEIGHT = 630;
 function truncate(text, maxLen) {
   if (text.length <= maxLen) return text;
   return text.slice(0, maxLen - 1).trimEnd() + '…';
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function buildSharePage(principle) {
+  const principleUrl = `${SITE_URL}?id=${principle.id}`;
+  const imageUrl = `${SITE_URL}/og-images/${principle.id}.png`;
+  const title = escapeHtml(principle.title);
+  const description = escapeHtml(principle.description);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>${title} — Quality Principles</title>
+  <meta name="description" content="${description}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${SITE_URL}/share/${principle.id}/" />
+  <meta property="og:title" content="${title}" />
+  <meta property="og:description" content="${description}" />
+  <meta property="og:image" content="${imageUrl}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Quality Principles" />
+  <meta http-equiv="refresh" content="0; url=${principleUrl}" />
+</head>
+<body>
+  <p>Redirecting to <a href="${principleUrl}">${title}</a>…</p>
+</body>
+</html>`;
 }
 
 function buildCard(principle) {
@@ -190,6 +224,20 @@ async function main() {
   }
 
   console.log(`\nDone! Generated ${principles.length} OG images in public/og-images/`);
+
+  // Generate static HTML share pages for social crawlers
+  console.log(`\nGenerating share pages for ${principles.length} principles...`);
+  for (const principle of principles) {
+    const shareDir = path.join(SHARE_DIR, principle.id);
+    if (!fs.existsSync(shareDir)) {
+      fs.mkdirSync(shareDir, { recursive: true });
+    }
+    const html = buildSharePage(principle);
+    const outPath = path.join(shareDir, 'index.html');
+    fs.writeFileSync(outPath, html);
+    console.log(`  ✓ share/${principle.id}/index.html`);
+  }
+  console.log(`\nDone! Generated ${principles.length} share pages in public/share/`);
 }
 
 main().catch((err) => {
