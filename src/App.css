@@ -84,19 +84,115 @@ canvas {
   justify-content: center;
 }
 
-.firstTimeModal{
-  color: var(--text-color);
-  border-radius: 16px;
-  position: absolute;
-  background-color: var(--bg-modal-color);
-  width: 50vw;
-  transform: translate(21vw, 50%);
-  padding: 20px;
+/* --- Welcome modal --- */
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-slide-up {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 500;
+  animation: modal-fade-in 0.3s ease-out both;
+}
+
+.firstTimeModal {
+  color: var(--text-color);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-modal-color);
+  width: min(460px, 88vw);
+  padding: 40px 36px 32px;
+  z-index: 501;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  animation: modal-slide-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #099966, #077777);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.firstTimeModal h1 {
+  font-size: 2.2rem;
+  margin: 8px 0 12px;
+}
+
+.modal-body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  max-width: 380px;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.modal-hint {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.85rem;
+  margin: 0 0 20px;
+  color: var(--text-color);
+  opacity: 0.55;
+}
+
+.modal-cta {
+  background: linear-gradient(135deg, #099966, #077777);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  font-size: 1.15rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(9, 153, 102, 0.35);
+}
+
+.modal-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(9, 153, 102, 0.45);
+}
+
+.modal-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(9, 153, 102, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal-backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .firstTimeModal {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+  .modal-cta {
+    box-shadow: 0 4px 14px rgba(9, 153, 102, 0.25);
+  }
 }
 
 .navigationButton{
