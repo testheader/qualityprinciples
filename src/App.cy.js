@@ -65,7 +65,7 @@ describe('<App />', () => {
             cy.findByRole('heading', {name: 'Welcome'}).should('not.exist')
         });
 
-        it('should show multiple prinicples', () => {
+        it('should show multiple principles', () => {
             cy.setCookie('isFirstTime', "false");
             cy.mount(<TestsWithRouterOverview/>)
 
