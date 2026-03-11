@@ -52,6 +52,29 @@ describe('<App />', () => {
             cy.findAllByRole('link', {name: 'LinkedIn'}).should('exist')
 
         })
+
+        it('should have og:image meta tag', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterRoot/>)
+
+            cy.get('head meta[property="og:image"]', {timeout: 5000}).should('exist')
+                .and('have.attr', 'content')
+                .and('match', /\/og-images\/.*\.png$/)
+            cy.get('head meta[property="og:image:width"]').should('exist')
+                .and('have.attr', 'content', '1200')
+            cy.get('head meta[property="og:image:height"]').should('exist')
+                .and('have.attr', 'content', '630')
+        })
+
+        it('should use LinkedIn share endpoint with share page URL', () => {
+            cy.setCookie('isFirstTime', "false");
+            cy.mount(<TestsWithRouterRoot/>)
+
+            cy.findByTestId('LinkedIn principle')
+                .should('have.attr', 'href')
+                .and('include', 'linkedin.com/share')
+                .and('include', '%2Fshare%2F')
+        })
     })
 
     describe('Overview tests', () => {
