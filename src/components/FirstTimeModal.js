@@ -10,20 +10,20 @@ function FirstTimeModal() {
             setModal("")
         } else {
             setModal(
-                <div className="firstTimeModal">
-                    <h1>Welcome</h1>
-                    <p>
-                        These quality principles are here to help you improve a specific aspect of your development
-                        process.
-                        To convey a message and make it memorable they have a catchy phrase or acronym.
-                        Don't take them as gospel, interpret them and apply them pragmatically.
-                    </p>
-                    <p><i>you won't see this message again</i></p>
-                    <button className={"button"} onClick={() => {
-                        setModal("")
-                        Cookies.set("isFirstTime", "false")
-                    }}>Let me in!
-                    </button>
+                <div className="modal-backdrop">
+                    <div className="firstTimeModal" role="dialog" aria-labelledby="welcome-heading">
+                        <h1 id="welcome-heading">Welcome</h1>
+                        <p className="modal-body">
+                            A curated collection of quality principles for software
+                            development&nbsp;— explore, share, and take one with you.
+                        </p>
+                        <p className="modal-hint"><i>you won't see this message again</i></p>
+                        <button className="modal-cta" onClick={() => {
+                            setModal("")
+                            Cookies.set("isFirstTime", "false")
+                        }}>Let me in!
+                        </button>
+                    </div>
                 </div>
             )
         }

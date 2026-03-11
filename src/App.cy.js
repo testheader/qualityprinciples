@@ -13,11 +13,21 @@ describe('<App />', () => {
             cy.findByRole('button', {name: 'Let me in!'}).should('be.visible')
         });
 
+        it('should display new modal content', () => {
+            cy.mount(<TestsWithRouterRoot/>)
+
+            cy.get('.modal-backdrop').should('exist')
+            cy.findByRole('dialog').should('exist')
+            cy.findByText(/curated collection of quality principles/).should('be.visible')
+            cy.findByText(/you won't see this message again/).should('be.visible')
+        });
+
         it('should let me in', () => {
             cy.mount(<TestsWithRouterRoot/>)
 
             cy.findByRole('button', {name: 'Let me in!'}).click();
             cy.findByRole('heading', {name: 'Welcome'}).should('not.exist')
+            cy.get('.modal-backdrop').should('not.exist')
         });
 
         it('should not display first modal again', () => {
