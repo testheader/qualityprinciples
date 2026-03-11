@@ -35,13 +35,15 @@ function buildSharePage(principle) {
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:image" content="${imageUrl}" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Quality Principles" />
-  <meta http-equiv="refresh" content="0; url=${principleUrl}" />
 </head>
 <body>
   <p>Redirecting to <a href="${principleUrl}">${title}</a>…</p>
+  <script>window.location.replace("${principleUrl}")</script>
+  <noscript><p>Click the link above if you are not redirected automatically.</p></noscript>
 </body>
 </html>`;
 }
