@@ -1,4 +1,4 @@
-import {CopyIcon, LinkedinIcon, ListIcon, TwitterIcon} from "../resources/Icons";
+import {CopyIcon, LinkedinIcon, ListIcon} from "../resources/Icons";
 import '../styles/HeaderBar.css'
 import {useEffect, useState} from "react";
 import {isMobile} from "react-device-detect";
@@ -11,16 +11,6 @@ function HeaderBar({principle}) {
         return () => clearTimeout(timeout);
     }, [isCopied]);
 
-
-    const buildTweet = () => {
-        let result = new URL("/intent/tweet", "https://x.com")
-        result.searchParams.append("text", principle.title + "\n")
-        result.searchParams.append("url", principle.url)
-        result.searchParams.append("via", "vdlgeert")
-        result.searchParams.append("hashtags", "qualityPrinciples")
-
-        return result.toString()
-    };
 
     const buildLinkedIn = () => {
         let result = new URL("share", "https://linkedin.com")
@@ -38,11 +28,10 @@ function HeaderBar({principle}) {
 
     const homePageSocials = () => {
         return <div className={"rightAlign"}>
-            <a className={"icon"} data-testid="Tweet principle" href={buildTweet()} rel="noreferrer" target="_blank"><TwitterIcon/></a>
             <a className={"icon"} data-testid="LinkedIn principle" href={buildLinkedIn()} rel="noreferrer" target="_blank"><LinkedinIcon/></a>
             <div role={"button"} data-testid="copy" className={`${isCopied? 'isCopied':''} icon`} onClick={() => {
                 setIsCopied(true);
-                navigator.clipboard.writeText(principle.url)
+                navigator.clipboard.writeText(principle.url).catch(() => {})
             }}>
                 <CopyIcon/>
             </div>
@@ -50,7 +39,7 @@ function HeaderBar({principle}) {
     }
     const overviewPageSocials = () => {
         return <div className={"rightAlign"}>
-            <div className={"icon"} onClick={() => navigator.clipboard.writeText(window.location.href)}>
+            <div className={"icon"} onClick={() => navigator.clipboard.writeText(window.location.href).catch(() => {})}>
                 <CopyIcon/>
             </div>
         </div>

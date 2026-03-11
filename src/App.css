@@ -126,11 +126,11 @@ canvas {
   align-items: center;
 }
 
-.navigationbutton:hover {
+.navigationButton:hover {
   background-color: #DDDDDD;
 }
 
-.navigationbutton:active {
+.navigationButton:active {
   background-color: #BBBBBB;
 }
 
@@ -192,4 +192,70 @@ footer p, footer p a{
   color: var(--text-color);
   font-size: .8rem;
   font-family: "Rubik", sans-serif;
+}
+
+/* ── Tag pill filter bar ───────────────────────────────── */
+.tag-pill-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px 16px;
+}
+
+.tag-pill {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9rem;
+  min-height: 44px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 2px solid var(--pill-border);
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+  line-height: 1.2;
+}
+
+.tag-pill:hover {
+  background: var(--pill-hover-bg);
+  border-color: var(--pill-hover-border);
+}
+
+.tag-pill--active {
+  background: var(--pill-active-bg);
+  color: var(--pill-active-text);
+  border-color: var(--pill-active-bg);
+}
+
+.tag-pill--active:hover {
+  background: var(--pill-active-hover-bg);
+  border-color: var(--pill-active-hover-bg);
+}
+
+/* Light-mode pill tokens */
+:root {
+  --pill-bg: transparent;
+  --pill-text: #333;
+  --pill-border: #bbb;
+  --pill-hover-bg: #e8e8e8;
+  --pill-hover-border: #999;
+  --pill-active-bg: #077777;
+  --pill-active-text: #fff;
+  --pill-active-hover-bg: #066666;
+}
+
+/* Dark-mode pill tokens */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pill-bg: transparent;
+    --pill-text: #ddd;
+    --pill-border: #666;
+    --pill-hover-bg: #333;
+    --pill-hover-border: #999;
+    --pill-active-bg: #0aa;
+    --pill-active-text: #111;
+    --pill-active-hover-bg: #099;
+  }
 }

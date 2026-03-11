@@ -42,9 +42,9 @@ function Overview() {
             {filteredPrinciples.length > 0 ? (
                 filteredPrinciples.map((principle, index) => {
                         return <div className={"description"} key={principle.title}>
-                            <h2><a href={`${window.location.origin}?id=${index}`}>{principle.title}</a></h2>
+                            <h2><a href={`${window.location.origin}?id=${principle.id}`}>{principle.title}</a></h2>
                             <p>{principle.description}</p>
-                            {principle.tags.map(tag => <span>{tag}, </span>)}
+                            {principle.tags.map(tag => <span key={tag}>{tag}, </span>)}
                             {principle.source.map(source => {
                                 if (source.includes("http")) {
                                     return <p className={"source"} key={source}><a href={source} target="_blank"
