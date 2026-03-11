@@ -1,1 +1,5 @@
+# Serve static share pages as-is (for social media crawlers)
+/share/*  /share/:splat  200
+
+# SPA fallback for all other routes
 /* /index.html 200
