@@ -44,13 +44,11 @@ describe('<App />', () => {
             cy.findByRole('button', {name: 'next'}).should('exist')
 
             cy.findByTestId('copy', ).should('exist')
-            cy.findByTestId('Tweet principle').should('exist')
             cy.findByTestId('LinkedIn principle').should('exist')
             cy.get('.HeaderTitle').should('exist')
             cy.findByTestId('open overview').should('exist')
 
             cy.findByText('By Geert van de Lisdonk').should('exist')
-            cy.findByRole('link', {name: 'twitter'}).should('exist')
             cy.findAllByRole('link', {name: 'LinkedIn'}).should('exist')
 
         })
