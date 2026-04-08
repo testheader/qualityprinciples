@@ -41,6 +41,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "@cypress/code-coverage": "^3.13.1",
     "@cypress/instrument-cra": "^1.4.0",
